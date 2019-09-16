@@ -16,4 +16,12 @@ $(function () {
         hidden.slideToggle(300);
 
     });
+
+    let slider = new Swiper ('.ibanner__container', {
+        loop: true,
+        pagination: {
+            el: '.ibanner__pag',
+            clickable: true
+        }
+    });
 });

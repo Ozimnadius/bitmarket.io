@@ -4,3 +4,53 @@ block variables
     - var title = 'Главная'
 
 block content
+    main.index
+        //- banner
+        section.index__banner
+            .ibanner
+                .swiper-container.ibanner__container
+                    .swiper-wrapper
+                        each i in [1,2,3]
+                            div(style='background-image:url(images/content/index/banner/bg.jpg)').swiper-slide.ibanner__slide
+                                .container
+                                    .ibanner__title
+                                        | Доставка заказа
+                                        br
+                                        | в любую точку
+                                        br
+                                        | России
+                                    a(href='info.html').btn.btn_b.ibanner__link Подробнее
+                    .ibanner__pag
+
+        //- row
+        section.index__row
+            .container
+                .row
+                    //- left
+                    .index__left
+                        //- blog
+                        .index__blog
+                            +blog([1, 2])
+
+
+                        //- actions
+                        .index__actions
+                            +actions()
+
+                        //- news
+                        .index__news
+                            .inews
+                                .inews__top
+                                    .inews__title.title Новости
+                                    a(href='news.html').inews__link.link Смотреть все
+                                .inews__list
+                                    +new([1])
+
+
+                        //- reviews
+                        .index__revs
+                            +revs()
+                    //- right
+                    .index__right
+
+
