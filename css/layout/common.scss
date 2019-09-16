@@ -1,0 +1,66 @@
+.btn {
+  width: 160px;
+  height: 50px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: transparent;
+  color: $text;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: .3s;
+
+  &:hover{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+  &_g{
+    border: 1px solid $white;
+    background-color: $white2;
+    color: $text;
+
+    &:hover{
+      background-color: $red;
+      border: 1px solid $red;
+      color: $bg;
+    }
+  }
+
+  &_r{
+    border: 1px solid $red;
+    background-color: $red;
+    color: $bg;
+  }
+
+  &_w{
+    border: 1px solid $white;
+    background-color: $bg;
+    color: $text;
+
+    &:hover{
+      background-color: $white2;
+    }
+  }
+
+  &_b{
+    border: 1px solid $text;
+    background-color: $text;
+    color: $bg;
+
+    &:hover{
+      border: 2px solid $text;
+      background-color: transparent;
+      box-shadow: none;
+      color: $text;
+    }
+  }
+
+  &.disabled {
+    opacity: .5;
+  }
+}

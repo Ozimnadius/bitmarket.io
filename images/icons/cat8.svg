@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="43.66" viewBox="0 0 46 43.66">
+    <defs>
+        <style>.cls-1{fill:none;stroke:#505050;stroke-linejoin:round;stroke-width:2px;}</style>
+    </defs>
+    <title>Ресурс 5</title>
+    <g id="Слой_2" data-name="Слой 2">
+        <g id="icons">
+            <rect class="cls-1" x="1" y="30.66" width="44" height="10" rx="2" ry="2"/>
+            <line class="cls-1" x1="5" y1="35.66" x2="7" y2="35.66"/>
+            <line class="cls-1" x1="9" y1="35.66" x2="11" y2="35.66"/>
+            <line class="cls-1" x1="13" y1="35.66" x2="15" y2="35.66"/>
+            <line class="cls-1" x1="4" y1="40.66" x2="4" y2="43.66"/>
+            <line class="cls-1" x1="42" y1="40.66" x2="42" y2="43.66"/>
+            <line class="cls-1" x1="31" y1="30.66" x2="31" y2="6.66"/>
+            <path class="cls-1" d="M36,6.38a3,3,0,0,1,0,4.55"/>
+            <path class="cls-1" d="M38.79,3.55a7,7,0,0,1,0,10.21"/>
+            <path class="cls-1" d="M41.62.72a11,11,0,0,1,0,15.87"/>
+            <path class="cls-1" d="M26,6.38a3,3,0,0,0,0,4.55"/>
+            <path class="cls-1" d="M23.17,3.55a7,7,0,0,0,0,10.21"/>
+            <path class="cls-1" d="M20.34.72a11,11,0,0,0,0,15.87"/>
+        </g>
+    </g>
+</svg>

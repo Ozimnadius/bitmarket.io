@@ -1,0 +1,244 @@
+include common/_mixins
+include common/_settings
+block variables
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+
+        title #{title}
+        link(rel='stylesheet' href='css/vendor.min.css')
+        link(rel='stylesheet' href='css/main.css')
+
+        link(rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png")
+        link(rel="manifest" href="images/favicon/site.webmanifest")
+        meta(name="msapplication-TileColor" content="#da532c")
+        meta(name="theme-color" content="#ffffff")
+    body
+        .wrapper
+            //- heeader
+            header.header
+                //- top
+                .header__top
+                    .container
+                        .header__top-row
+                            //- menu
+                            .header__menu
+                                each i in menu
+                                    a(href=i.href).header__item= i.title
+
+                            //- user
+                            .header__right
+                                //- search
+                                a(href='search.html').header__search
+
+                                //- user
+                                //Верстка для неавторизованного юзера
+                                .header__user
+                                    .user
+                                        a(href='cabinet.html').user__link Вход
+                                        a(href='cabinet.html').user__link Регистрация
+
+                                // Верстка для авторизованного юзера
+                                //.header__user
+                                //    .user
+                                //        a(href='cabinet.html').user__link.user__link_d
+                                //            +icon('user','user__link-svg')
+                                //            span Перейти в кабинет
+                                //        a(href='cabinet.html').user__link Баллов: 1 450
+                                //
+
+                //- middle
+                .header__middle
+                    .container
+                        .header__middle-row
+                            //- logo
+                            .header__logo
+                                a(href='/').logo
+                                    img(src='images/logo.png').logo__img
+
+                            //- contacts
+                            .header__contacts
+                                .hcontacts
+                                    each i in hcontacts
+                                        .hcontact
+                                            .hcontact__name= i.name
+                                            a(href=i.href).hcontact__link= i.val
+
+
+
+                            //- order
+                            .header__order
+                                //- controls
+                                .header__controls
+                                    a(href='cabinet.html').header__control
+                                        +icon('recycle', 'header__control-svg')
+                                    a(href='cabinet.html').header__control
+                                        +icon('heart', 'header__control-svg')
+
+                                //- basket
+                                .header__basket
+                                    a(href='basket.html').cart
+                                        .cart__left
+                                            +icon('cart', 'cart__svg')
+
+                                        .cart__right
+                                            .cart__count
+                                                span.cart__count-val 3
+                                                span.cart__count-type &nbsp;шт.
+                                            .cart__price
+                                                span.cart__price-val 25 590
+                                                span.cart__price-type &nbsp;руб.
+                //- bottom
+                .header__bottom
+                    .container
+                        .row
+                            .header__catalog
+                                .menu-link
+                                    a(href='catalog.html').menu-link__wrap
+                                        .menu-link__left
+                                            .menu-link__round
+                                            .menu-link__round
+                                            .menu-link__round
+
+                                        .menu-link__right
+                                            .menu-link__title Каталог товаров
+                                            +icon('angle', 'menu-link__svg')
+                                    .menu
+                                        .menu__list
+                                            each i in menu2
+                                                .menu__item
+                                                    a(href='catalog.html').menu__link
+                                                        .menu__img
+                                                            +icon(i.svg,'menu__pic')
+                                                        .menu__title= i.title
+                                                        +icon('angle-r','menu__svg')
+                                                    .submenu
+                                                        each j in menu2
+                                                            a(href='catalog.html').submenu__item= j.title
+                                            .menu__hidden
+                                                each i in menu2
+                                                    .menu__item
+                                                        a(href='catalog.html').menu__link
+                                                            .menu__img
+                                                                +icon(i.svg,'menu__pic')
+                                                            .menu__title= i.title
+                                                            .menu__arr
+                                                                +icon('angle-r','menu__svg')
+                                                        .submenu
+                                                            each j in menu2
+                                                                a(href='catalog.html').submenu__item= j.title
+
+
+
+
+                                        button(type='button').menu__more
+                                            .menu__more-text Показать полностью
+                                            .menu__more-text Скрыть
+                            .header__nav
+                                .nav
+                                    each i in nav
+                                        .nav__item
+                                            a(href=i.href).nav__item-title
+                                                .nav__item-text= i.title
+                                                if i.submenu
+                                                     +icon('angle','nav__item-svg')
+                                            if i.submenu
+                                                .subnav
+                                                    each j in menu2
+                                                        a(href='about.html').subnav__item= j.title
+
+
+
+
+            //- pages
+            .page
+                block content
+
+            //- footer
+            footer.footer
+                //- top
+                .footer__top
+                    .container
+                        .footer__top-row
+                            //- logo
+                            .footer__logo
+                                a(href='/').logo
+                                    img(src='images/logo.png').logo__img
+
+                            //- contacts
+                            .footer__contacts
+                                .hcontacts
+                                    each i in hcontacts
+                                        .hcontact
+                                            .hcontact__name= i.name
+                                            a(href=i.href).hcontact__link= i.val
+
+                            //- order
+                            .footer__subscribe
+                                form.fsub
+                                    input(type='email' name='email' placeholder='Введи свой имейл').fsub__input
+                                    button(type='submit').fsub__submit Подписаться на обновления
+
+                //- middle
+                .footer__middle
+                    .container
+                        .row
+                            .footer__left
+                                .fmenu
+                                    each col in fmenu
+                                        .fmenu__col
+                                            .fmenu__title= col.title
+                                            .fmenu__list
+                                                each i in col.list
+                                                    a(href=i.href).fmenu__item= i.title
+
+
+                            .footer__right
+                                .fmap
+                                    .fmap__top
+                                        .fmap__title Мы на карте
+                                        button(type='button').fmap__button Развернуть карту
+                                    .fmap__bottom
+                                        .fmap__map
+                                            #map
+
+                //- bottom
+                .footer__bottom
+                    .container
+                        .footer__copy © Все права защищены 2019
+
+    .debug
+        div
+            div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+                div
+
+
+
+    script(src='js/vendor.min.js')
+    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
+    script(src='js/main.min.js')

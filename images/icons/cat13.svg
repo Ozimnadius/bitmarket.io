@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none;stroke:#505050;stroke-width:2px;}.cls-1{stroke-miterlimit:10;}.cls-2{stroke-linejoin:round;}
+        </style>
+    </defs>
+    <title>Ресурс 9</title>
+    <g id="Слой_2" data-name="Слой 2">
+        <g id="icons">
+            <path class="cls-1" d="M44,27V3a2,2,0,0,0-2-2H6A2,2,0,0,0,4,3V27"/>
+            <line class="cls-2" x1="10" y1="4" x2="7" y2="7"/>
+            <line class="cls-2" x1="15" y1="4" x2="7" y2="12"/>
+            <path class="cls-1" d="M29,27l-1,1H20l-1-1H1a4,4,0,0,0,4,4H43a4,4,0,0,0,4-4Z"/>
+        </g>
+    </g>
+</svg>

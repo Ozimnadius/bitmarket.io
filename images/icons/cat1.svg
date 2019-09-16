@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="38" viewBox="0 0 42 38">
+    <defs>
+        <style>.cls-1{fill:none;stroke:#505050;stroke-linejoin:round;stroke-width:2px;}</style>
+    </defs>
+    <title>Ресурс 1</title>
+    <g id="Слой_2" data-name="Слой 2">
+        <g id="icons">
+            <path class="cls-1"
+                  d="M34.58,3.25A3,3,0,0,0,31.68,1H10.32a3,3,0,0,0-2.9,2.25L1.26,26A8,8,0,0,0,1,28v7a2,2,0,0,0,2,2H39a2,2,0,0,0,2-2V28a8,8,0,0,0-.26-2Z"/>
+            <line class="cls-1" x1="1" y1="27" x2="41" y2="27"/>
+            <line class="cls-1" x1="5" y1="32" x2="7" y2="32"/>
+            <line class="cls-1" x1="9" y1="32" x2="11" y2="32"/>
+            <line class="cls-1" x1="13" y1="32" x2="15" y2="32"/>
+        </g>
+    </g>
+</svg>

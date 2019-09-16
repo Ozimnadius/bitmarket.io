@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="31" viewBox="0 0 48 31">
+    <defs>
+        <style>.cls-1{fill:none;stroke:#505050;stroke-miterlimit:10;stroke-width:2px;}</style>
+    </defs>
+    <title>Ресурс 7</title>
+    <g id="Слой_2" data-name="Слой 2">
+        <g id="icons">
+            <path class="cls-1"
+                  d="M38,13H1v4l.59.59a2,2,0,0,1,0,2.83L1,21v4H3v5H36V25h2V21l-.59-.59a2,2,0,0,1,0-2.83L38,17Z"/>
+            <rect class="cls-1" x="7" y="17" width="5" height="6"/>
+            <rect class="cls-1" x="17" y="17" width="5" height="6"/>
+            <rect class="cls-1" x="27" y="17" width="5" height="6"/>
+            <line class="cls-1" x1="7" y1="27" x2="7" y2="30"/>
+            <line class="cls-1" x1="12" y1="27" x2="12" y2="30"/>
+            <line class="cls-1" x1="17" y1="27" x2="17" y2="30"/>
+            <line class="cls-1" x1="22" y1="27" x2="22" y2="30"/>
+            <line class="cls-1" x1="27" y1="27" x2="27" y2="30"/>
+            <line class="cls-1" x1="32" y1="27" x2="32" y2="30"/>
+            <path class="cls-1"
+                  d="M10,10V9l.59-.59a2,2,0,0,0,0-2.83L10,5V1H47V5l-.59.59a2,2,0,0,0,0,2.83L47,9v4H45v4H41"/>
+            <polyline class="cls-1" points="16 10 16 5 21 5 21 10"/>
+            <polyline class="cls-1" points="26 10 26 5 31 5 31 10"/>
+            <polyline class="cls-1" points="36 10 36 5 41 5 41 10"/>
+        </g>
+    </g>
+</svg>
