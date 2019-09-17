@@ -7,13 +7,26 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include sm-block {
+        justify-content: flex-end;
+      }
     }
+  }
+
+  &__contacts {
+    @include lg-block {
+      display: none;
+    }
+  ;
   }
 
   &__menu {
     display: flex;
     margin-left: -33px;
     margin-right: -33px;
+    @include sm-block {
+      display: none;
+    }
   }
 
   &__item {
@@ -23,7 +36,7 @@
     padding: 0 33px;
     border-right: 1px solid $bg;
 
-    &:last-child{
+    &:last-child {
       border-right: none;
     }
   }
@@ -33,26 +46,51 @@
     align-items: center;
   }
 
-  &__search{
-    //width: 36px;
-    //height: 36px;
+  &__search {
+    width: 36px;
+    height: 36px;
     //border-radius: 4px;
     //background-color: $bg;
     //opacity: 0.1;
     margin-right: 10px;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  &__middle{
-    padding: 40px 0;
-    border-bottom: 1px solid $white;
-    &-row{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    &-svg {
+      width: 17px;
+      height: 18px;
+      fill: $bg;
     }
   }
 
-  &__order{
+  &__middle {
+    padding: 40px 0;
+    border-bottom: 1px solid $white;
+    @include sm-block{
+      padding-bottom: 20px;
+    }
+
+    &-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include sm-block {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__logo {
+    @include sm-block {
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__order {
     display: flex;
     align-items: center;
   }
@@ -60,6 +98,9 @@
   &__controls {
     display: flex;
     margin-right: 20px;
+    @include sm-block{
+      margin-right: 10px;
+    }
   }
 
   &__control {
@@ -73,14 +114,18 @@
     align-items: center;
     justify-content: center;
     @include tr3s;
-    &:last-child{
+    @include sm-block {
+      margin-right: 10px;
+    }
+
+    &:last-child {
       margin-right: 0;
     }
 
-    &:hover,&:active,&:focus{
+    &:hover, &:active, &:focus {
       background: $red;
 
-      .header__control-svg{
+      .header__control-svg {
         fill: $bg;
       }
     }
@@ -95,16 +140,31 @@
   &__bottom {
     border-bottom: 1px solid $white;
     background-color: $bg;
+    .row {
+      @include sm-block{
+        margin: 0;
+      }
+    }
   }
 
-  &__catalog{
+  &__catalog {
     @include col;
     @include size(3);
+    @include size-lg(6.2);
+    @include sm-block{
+      width: calc(100% - 60px);
+      margin: 0;
+    }
   }
 
-  &__nav{
+  &__nav {
     @include col;
     @include size(12);
+    @include size-lg(8.8);
+    @include sm-block{
+      width: 60px;
+      margin: 0;
+    }
   }
 
 }
@@ -112,10 +172,11 @@
 .user {
   display: flex;
   align-items: center;
+
   &__link {
     min-width: 86px;
     height: 50px;
-    background-color: rgba($bg,.1);
+    background-color: rgba($bg, .1);
     display: flex;
     align-items: center;
     text-align: center;
@@ -128,12 +189,12 @@
     font-weight: 300;
     margin-right: 10px;
 
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
 
-    &_d{
-      background-color: rgba($bg,.03);
+    &_d {
+      background-color: rgba($bg, .03);
     }
 
     &-svg {
@@ -154,14 +215,23 @@
 .hcontacts {
   display: flex;
   align-items: center;
+  @include lg-block {
+    flex-wrap: wrap;
+  }
 }
 
-.hcontact{
+.hcontact {
   margin-right: 80px;
   font-size: 12px;
-
-  &:last-child{
+  @include lg-block {
     margin-right: 0;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  &:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
   }
 
   &__name {
@@ -175,7 +245,7 @@
   }
 }
 
-.cart{
+.cart {
   width: 200px;
   height: 60px;
   border-radius: 8px;
@@ -184,15 +254,22 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+  @include sm-block{
+    width: 170px;
+  }
 
-  &__left{
+  &__left {
     width: 59px;
     height: 100%;
-    background-color: rgba($bg,.1);
+    background-color: rgba($bg, .1);
     margin-right: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
+    @include sm-block{
+      width: 50px;
+      margin-right: 10px;
+    }
   }
 
   &__svg {
@@ -202,27 +279,68 @@
   }
 
   &__count {
-    &-val{
+    &-val {
       font-size: 18px;
       font-weight: 700;
     }
+
     &-type {
       font-size: 10px;
     }
   }
 
-  &__price{
-    &-val{
+  &__price {
+    &-val {
       font-size: 12px;
       font-weight: 700;
     }
+
     &-type {
       font-size: 10px;
     }
   }
 }
 
-.menu{
+.submenu {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  width: 240px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  border: 1px solid $white;
+  background-color: $bg;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: calc(100% + 10px);
+  padding: 10px 20px;
+
+  &__item {
+    display: block;
+
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    font-size: 12px;
+    letter-spacing: 0.72px;
+    transition: .3s;
+    padding: 10px 0;
+    @include tr3s;
+
+    &:hover {
+      font-weight: 700;
+      color: $red;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.menu {
   display: none;
 
   &.active {
@@ -230,6 +348,7 @@
   }
 
   position: absolute;
+  z-index: 100;
   left: 0;
   top: calc(100% + 10px);
   width: 343px;
@@ -237,8 +356,11 @@
   border-radius: 10px;
   border: 1px solid $white;
   background-color: $bg;
+  @include sm-block{
+    width: 270px;
+  }
 
-  &__list{
+  &__list {
     padding: 8px 30px 8px 20px;
   }
 
@@ -247,7 +369,9 @@
   }
 
   &__item {
-    &:hover,&:active,&:focus{
+
+
+    &:hover {
 
       &:after {
         content: '';
@@ -259,19 +383,65 @@
         width: 100px;
       }
 
-      .menu{
+      .menu {
+        &__pic {
+          stroke: $red;
+          @include lg-block {
+            stroke: rgba($text, .5);
+          }
+        }
+
+        &__title {
+          @include lg-block {
+            color: $black;
+          }
+          color: $red;
+        }
+
+        &__svg {
+          @include lg-block {
+            fill: $text;
+          }
+          fill: $red;
+        }
+      }
+
+      .submenu {
+        display: block;
+        @include lg-block {
+          display: none;
+        }
+      }
+
+    }
+
+    &.active {
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: calc(100% - 35px);
+        top: 0;
+        bottom: 0;
+        width: 100px;
+      }
+
+      .menu {
         &__pic {
           stroke: $red;
         }
+
         &__title {
           color: $red;
         }
+
         &__svg {
           fill: $red;
         }
       }
 
-      .submenu{
+      .submenu {
         display: block;
       }
 
@@ -297,7 +467,7 @@
   &__pic {
     max-width: 100%;
     max-height: 100%;
-    stroke: rgba($text,.5);
+    stroke: rgba($text, .5);
     fill: transparent;
     @include tr3s;
   }
@@ -312,7 +482,7 @@
     @include tr3s;
   }
 
-  &__svg{
+  &__svg {
     position: absolute;
     right: 0;
     top: 50%;
@@ -338,15 +508,16 @@
     letter-spacing: 0.72px;
 
     &-text {
-      &:last-child{
+      &:last-child {
         display: none;
       }
     }
 
-    &.open{
+    &.open {
       .menu__more-text {
         display: none;
-        &:last-child{
+
+        &:last-child {
           display: block;
         }
       }
@@ -361,10 +532,10 @@
   position: relative;
   @include tr3s;
 
-  &.active{
+  &.active {
     background-color: $red;
 
-    &:after{
+    &:after {
       content: '';
       display: block;
       position: absolute;
@@ -374,7 +545,7 @@
       right: 0;
     }
 
-    .menu-link{
+    .menu-link {
       &__round {
         background-color: $bg;
       }
@@ -383,7 +554,7 @@
         color: $bg;
       }
 
-      &__svg{
+      &__svg {
         transform: rotate(-180deg);
         fill: $bg;
       }
@@ -406,6 +577,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include sm-block{
+      display: none;
+    }
   }
 
   &__round {
@@ -415,7 +589,8 @@
     background-color: $red;
     margin-bottom: 3px;
     transition: .3s;
-    &:last-child{
+
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -436,7 +611,7 @@
     @include tr3s;
   }
 
-  &__svg{
+  &__svg {
     width: 10px;
     height: 6px;
     position: absolute;
@@ -447,33 +622,37 @@
   }
 }
 
-.nav{
+.nav {
   border-right: 1px solid $white;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  @include lg-block {
+    display: none;
+  }
 
   &__item {
-    width: calc(100%/6);
+    width: calc(100% / 6);
     position: relative;
 
-    &:hover{
-      .subnav{
+    &:hover {
+      .subnav {
         display: block;
       }
 
-      &:after{
+      &:after {
         content: '';
         display: block;
         position: absolute;
+        z-index: 100;
         top: 100%;
         height: 20px;
         left: 0;
         right: 0;
       }
 
-      .nav{
-        &__item{
+      .nav {
+        &__item {
           &-text {
             color: $red;
           }
@@ -481,11 +660,11 @@
       }
     }
 
-    &:last-child{
-      .nav{
+    &:last-child {
+      .nav {
         &__item {
           &-title {
-            &:after{
+            &:after {
               display: none;
             }
           }
@@ -501,10 +680,11 @@
       justify-content: center;
 
 
-      &:after{
+      &:after {
         content: '';
         display: block;
         position: absolute;
+        z-index: 100;
         top: 50%;
         margin-top: -5.5px;
         right: 0;
@@ -531,42 +711,40 @@
   }
 }
 
-.submenu {
+.mmenu-btn {
   display: none;
-
-  &.active {
-    display: block;
+  @include lg-block {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
   }
-  width: 240px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
-  border: 1px solid $white;
-  background-color: $bg;
-  position: absolute;
-  top: 0;
-  left: calc(100% + 10px);
-  padding: 10px 20px;
 
-  &__item {
-    display: block;
-
-    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-    font-size: 12px;
-    letter-spacing: 0.72px;
-    transition: .3s;
-    padding: 10px 0;
-    @include tr3s;
-
-    &:hover {
-      font-weight: 700;
-      color: $red;
+  &__title {
+    color: $text;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-right: 20px;
+    @include sm-block{
+      display: none;
     }
+  }
 
-    &:last-child{
-      margin-bottom: 0;
-    }
+  &__btn {
+    width: 61px;
+    height: 100%;
+    background-color: $red;
+  }
+
+  &__svg {
+    width: 26px;
+    height: 18px;
+    fill: $bg;
   }
 }
+
 
 .subnav {
   display: none;
@@ -576,6 +754,7 @@
   border: 1px solid $white;
   background-color: $bg;
   position: absolute;
+  z-index: 100;
   top: calc(100% + 10px);
   left: 50%;
   margin-left: -110px;
@@ -590,6 +769,7 @@
     letter-spacing: 0.6px;
     padding: 10px 0;
     @include tr3s;
+
     &:hover {
       font-weight: 700;
       color: $red;

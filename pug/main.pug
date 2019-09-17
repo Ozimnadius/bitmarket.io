@@ -36,6 +36,7 @@ html(lang="ru")
                             .header__right
                                 //- search
                                 a(href='search.html').header__search
+                                    +icon('loop', 'header__search-svg')
 
                                 //- user
                                 //Верстка для неавторизованного юзера
@@ -51,7 +52,6 @@ html(lang="ru")
                                 //            +icon('user','user__link-svg')
                                 //            span Перейти в кабинет
                                 //        a(href='cabinet.html').user__link Баллов: 1 450
-                                //
 
                 //- middle
                 .header__middle
@@ -156,6 +156,11 @@ html(lang="ru")
 
 
 
+                                .mmenu-btn
+                                    .mmenu-btn__title Меню
+                                    button(type='button').mmenu-btn__btn
+                                        +icon('mmenu-btn','mmenu-btn__svg')
+
             //- pages
             .page
                 block content
@@ -190,13 +195,23 @@ html(lang="ru")
                     .container
                         .row
                             .footer__left
-                                .fmenu
-                                    each col in fmenu
-                                        .fmenu__col
-                                            .fmenu__title= col.title
-                                            .fmenu__list
-                                                each i in col.list
-                                                    a(href=i.href).fmenu__item= i.title
+                                .row
+                                    .footer__menu
+                                        .fmenu
+                                            each col in fmenu
+                                                .fmenu__col
+                                                    .fmenu__title= col.title
+                                                    .fmenu__list
+                                                        each i in col.list
+                                                            a(href=i.href).fmenu__item= i.title
+                                    .footer__contacts.footer__contacts_t
+                                        .hcontacts
+                                            .fmenu__title Контакты
+                                            each i in hcontacts
+                                                .hcontact
+                                                    .hcontact__name= i.name
+                                                    a(href=i.href).hcontact__link= i.val
+
 
 
                             .footer__right

@@ -71,6 +71,9 @@
   font-size: 24px;
   font-weight: 800;
   line-height: 1;
+  @include sm-block{
+    font-size: 18px;
+  }
 }
 
 .link {
@@ -78,4 +81,89 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 1;
+}
+
+.slider {
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    @include lg-block{
+      margin-bottom: 14px;
+    }
+  }
+
+  &__title{
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:after{
+      content: '';
+      height: 1px;
+      flex-grow: 1;
+      background-color: $white;
+      margin-left: 40px;
+      @include sm-block{
+        display: none;
+      }
+    }
+  }
+
+  &__nav {
+    min-width: 120px;
+    width: 120px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid $white;
+    background-color: $bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include sm-block{
+      width: 100px;
+      min-width: 100px;
+    }
+  }
+
+  &__container {
+    padding-bottom: 10px;
+  }
+
+  &__slide{
+    box-sizing: border-box;
+    height: auto;
+  }
+}
+
+.arrow{
+  margin-right: 20px;
+  &:hover{
+    .arrow__svg{
+      fill: $red;
+    }
+  }
+
+
+  &.swiper-button-disabled{
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  &:last-child{
+    margin-right: 0;
+  }
+  &__svg {
+    width: 28px;
+    height: 15px;
+    fill: $text;
+    @include tr3s;
+    @include sm-block{
+      // Style for "Shape 2"
+      width: 20px;
+      height: 11px;
+    }
+  }
 }

@@ -19,6 +19,8 @@ block content
                                         | в любую точку
                                         br
                                         | России
+                                    .ibanner__img
+                                        img(src='images/content/index/banner/text.png').ibanner__pic
                                     a(href='info.html').btn.btn_b.ibanner__link Подробнее
                     .ibanner__pag
 
@@ -52,5 +54,51 @@ block content
                             +revs()
                     //- right
                     .index__right
-
+                        //- new-items
+                        .index__new-items
+                            +slider('Новые товары','new-items')
+                        //- popular
+                        .index__popular
+                            div(class='ipopular').slider
+                                .slider__top
+                                    +sliderTitle('Популярные рубрики')
+                                .slider__bottom
+                                    .swiper-container.slider__container
+                                        .swiper-wrapper
+                                            each i in ipopular
+                                                .swiper-slide.slider__slide
+                                                    a(href='catalog.html').part
+                                                        .part__img
+                                                            +icon(i.svg,'part__svg')
+                                                        .part__title= i.title
+                        //- promo
+                        .index__promo
+                            .ipromo
+                                .row
+                                    .ipromo__content
+                                        .ipromo__title
+                                            |Сборка профессиональных
+                                            br
+                                            |пк и серверного оборудо-
+                                            br
+                                            |вания под ключ!
+                                        .ipromo__sub Предлагаем услуги по сборке и установке оборудования под ключ, для полной автоматизации вашего бизнеса, с учетом его направленности.
+                                        a(href='news.html').btn.btn_r.ipromo__link Узнать подробнее
+                        //- sale
+                        .index__sale
+                            +slider('Распродажа','isale')
+        //- brands
+        section.index__brands
+            .container
+                div(class='ibrands').slider
+                    .slider__top
+                        +sliderTitle('Наши бренды')
+                    .slider__bottom
+                        .swiper-container.slider__container
+                            .swiper-wrapper
+                                each i in [1,2,3,4,5,6,7,8,9,10]
+                                    .swiper-slide.slider__slide
+                                        a(href='brands.html').ibrand
+                                            .ibrand__img
+                                                img(src='images/content/index/brands/'+i+'.png')
 

@@ -24,4 +24,23 @@ $(function () {
             clickable: true
         }
     });
+
+    $('.menu__link').on('click', function (e) {
+        e.stopPropagation();
+
+        if (wWidth<1500) {
+            e.preventDefault();
+            let $this = $(this),
+                item = $this.closest('.menu__item'),
+                items = $('.menu__item').not(item);
+
+            items.removeClass('active');
+            item.toggleClass('active');
+        }
+    });
+
+    $('.submenu__item').on('click', function (e) {
+        e.stopPropagation();
+    });
+
 });

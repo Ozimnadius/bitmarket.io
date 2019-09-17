@@ -13,18 +13,52 @@
     }
   }
 
+  &__contacts {
+    @include lg-block{
+      display: none;
+    }
+
+    &_t{
+      display: none;
+      @include lg-block{
+        display: flex;
+      }
+      @include size-lg(4.7);
+    }
+  }
+
+  &__subscribe {
+    @include sm-block{
+      display: none;
+    }
+  }
+
   &__middle {
     padding: 60px 0;
+    @include lg-block{
+      padding: 45px 0;
+    }
   }
 
   &__left {
     @include col;
     @include size(4);
+    @include size-lg(15);
+    @include lg-block{
+      margin-bottom: 40px;
+    }
+  }
+
+  &__menu {
+    @include col;
+    @include size(15);
+    @include size-lg(10.3);
   }
 
   &__right {
     @include col;
     @include size(11);
+    @include size-lg(15);
   }
 
   &__bottom {
@@ -86,6 +120,9 @@
     font-size: 18px;
     font-weight: 800;
     margin-bottom: 40px;
+    @include lg-block{
+      margin-bottom: 35px;
+    }
   }
 
   &__item {
@@ -96,6 +133,9 @@
     @include tr3s;
     &:last-child{
       margin-bottom: 0;
+    }
+    @include lg-block{
+      margin-bottom: 23px;
     }
 
     &:hover {
