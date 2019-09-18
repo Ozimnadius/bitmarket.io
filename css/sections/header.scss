@@ -218,6 +218,9 @@
   @include lg-block {
     flex-wrap: wrap;
   }
+  @include sm-block{
+      justify-content: space-between;
+  }
 }
 
 .hcontact {
@@ -227,6 +230,9 @@
     margin-right: 0;
     margin-bottom: 30px;
     width: 100%;
+  }
+  @include sm-block{
+    width: auto;
   }
 
   &:last-child {
@@ -303,11 +309,9 @@
 
 .submenu {
   display: none;
-
   &.active {
     display: block;
   }
-
   width: 240px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
@@ -443,6 +447,9 @@
 
       .submenu {
         display: block;
+        @include sm-block{
+          display: none;
+        }
       }
 
     }
@@ -492,6 +499,9 @@
     max-width: 100%;
     max-height: 100%;
     @include tr3s;
+    @include sm-block{
+      display: none;
+    }
   }
 
   &__more {
@@ -713,11 +723,18 @@
 
 .mmenu-btn {
   display: none;
+  position: relative;
   @include lg-block {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     height: 100%;
+  }
+
+  &.active{
+    .mmenu {
+      display: block;
+    }
   }
 
   &__title {
@@ -744,7 +761,6 @@
     fill: $bg;
   }
 }
-
 
 .subnav {
   display: none;
@@ -774,5 +790,34 @@
       font-weight: 700;
       color: $red;
     }
+  }
+}
+
+.mmenu {
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  top: calc(100% + 10px);
+  width: 270px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  border: 1px solid $white;
+  background-color: $bg;
+  display: none;
+  padding: 8px 30px 8px 20px;
+
+  &__item {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 5px;
+
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    color: $black;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.72px;
+    @include tr3s;
   }
 }

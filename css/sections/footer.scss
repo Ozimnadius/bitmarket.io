@@ -22,8 +22,10 @@
       display: none;
       @include lg-block{
         display: flex;
+        @include col;
       }
       @include size-lg(4.7);
+      @include size-sm(15);
     }
   }
 
@@ -31,12 +33,24 @@
     @include sm-block{
       display: none;
     }
+    &_m {
+      display: none;
+      @include sm-block{
+        display: block;
+        @include col;
+        margin-bottom: 25px;
+      }
+      @include size-sm(15);
+    }
   }
 
   &__middle {
     padding: 60px 0;
     @include lg-block{
       padding: 45px 0;
+    }
+    @include sm-block{
+      padding-top: 20px;
     }
   }
 
@@ -53,6 +67,10 @@
     @include col;
     @include size(15);
     @include size-lg(10.3);
+    @include size-sm(15);
+    @include sm-block{
+      margin-bottom: 40px;
+    }
   }
 
   &__right {
@@ -69,6 +87,9 @@
   &__copy {
     color: $bg;
     font-size: 10px;
+    @include sm-block{
+      text-align: center;
+    }
   }
 }
 
@@ -90,6 +111,11 @@
     &::placeholder{
       opacity: .5;
     }
+    @include sm-block{
+      width: calc(100% - 127px);
+      flex-grow: 1;
+      padding: 0 10px;
+    }
   }
 
   &__submit {
@@ -102,6 +128,9 @@
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.6px;
+    @include sm-block{
+      width: 127px;
+    }
 
   }
 }
@@ -122,6 +151,9 @@
     margin-bottom: 40px;
     @include lg-block{
       margin-bottom: 35px;
+    }
+    @include sm-block{
+      width: 100%;
     }
   }
 

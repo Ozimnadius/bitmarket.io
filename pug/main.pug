@@ -161,6 +161,10 @@ html(lang="ru")
                                     button(type='button').mmenu-btn__btn
                                         +icon('mmenu-btn','mmenu-btn__svg')
 
+                                    .mmenu
+                                        each i in nav
+                                            a(href=i.href).mmenu__item= i.title
+
             //- pages
             .page
                 block content
@@ -196,6 +200,12 @@ html(lang="ru")
                         .row
                             .footer__left
                                 .row
+                                    //- order
+                                    .footer__subscribe.footer__subscribe_m
+                                        form.fsub
+                                            input(type='email' name='email' placeholder='Введи свой имейл').fsub__input
+                                            button(type='submit').fsub__submit Подписаться на обновления
+
                                     .footer__menu
                                         .fmenu
                                             each col in fmenu

@@ -749,6 +749,14 @@ input, textarea {
   }
 }
 
+@media screen and (max-width: 767.99px) {
+  .hcontacts {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
 .hcontact {
   margin-right: 80px;
   font-size: 12px;
@@ -759,6 +767,12 @@ input, textarea {
     margin-right: 0;
     margin-bottom: 30px;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 767.99px) {
+  .hcontact {
+    width: auto;
   }
 }
 
@@ -993,6 +1007,12 @@ input, textarea {
   display: block;
 }
 
+@media screen and (max-width: 767.99px) {
+  .menu__item.active .submenu {
+    display: none;
+  }
+}
+
 .menu__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1047,6 +1067,12 @@ input, textarea {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
+}
+
+@media screen and (max-width: 767.99px) {
+  .menu__svg {
+    display: none;
+  }
 }
 
 .menu__more {
@@ -1292,6 +1318,7 @@ input, textarea {
 
 .mmenu-btn {
   display: none;
+  position: relative;
 }
 
 @media screen and (max-width: 1499.99px) {
@@ -1307,6 +1334,10 @@ input, textarea {
     justify-content: flex-end;
     height: 100%;
   }
+}
+
+.mmenu-btn.active .mmenu {
+  display: block;
 }
 
 .mmenu-btn__title {
@@ -1367,6 +1398,37 @@ input, textarea {
 .subnav__item:hover {
   font-weight: 700;
   color: #d42a2d;
+}
+
+.mmenu {
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  top: calc(100% + 10px);
+  width: 270px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  border: 1px solid #ebebeb;
+  background-color: #ffffff;
+  display: none;
+  padding: 8px 30px 8px 20px;
+}
+
+.mmenu__item {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 5px;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  color: #252525;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.72px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .index__banner {
@@ -2514,6 +2576,11 @@ input, textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
@@ -2524,8 +2591,36 @@ input, textarea {
 }
 
 @media screen and (max-width: 767.99px) {
+  .footer__contacts_t {
+    width: calc(100% - 30px);
+  }
+}
+
+@media screen and (max-width: 767.99px) {
   .footer__subscribe {
     display: none;
+  }
+}
+
+.footer__subscribe_m {
+  display: none;
+}
+
+@media screen and (max-width: 767.99px) {
+  .footer__subscribe_m {
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 767.99px) {
+  .footer__subscribe_m {
+    width: calc(100% - 30px);
   }
 }
 
@@ -2536,6 +2631,12 @@ input, textarea {
 @media screen and (max-width: 1499.99px) {
   .footer__middle {
     padding: 45px 0;
+  }
+}
+
+@media screen and (max-width: 767.99px) {
+  .footer__middle {
+    padding-top: 20px;
   }
 }
 
@@ -2575,6 +2676,18 @@ input, textarea {
   }
 }
 
+@media screen and (max-width: 767.99px) {
+  .footer__menu {
+    width: calc(100% - 30px);
+  }
+}
+
+@media screen and (max-width: 767.99px) {
+  .footer__menu {
+    margin-bottom: 40px;
+  }
+}
+
 .footer__right {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -2598,6 +2711,12 @@ input, textarea {
 .footer__copy {
   color: #ffffff;
   font-size: 10px;
+}
+
+@media screen and (max-width: 767.99px) {
+  .footer__copy {
+    text-align: center;
+  }
 }
 
 .fsub {
@@ -2635,6 +2754,16 @@ input, textarea {
   opacity: .5;
 }
 
+@media screen and (max-width: 767.99px) {
+  .fsub__input {
+    width: calc(100% - 127px);
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 0 10px;
+  }
+}
+
 .fsub__submit {
   width: 140px;
   height: 100%;
@@ -2645,6 +2774,12 @@ input, textarea {
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.6px;
+}
+
+@media screen and (max-width: 767.99px) {
+  .fsub__submit {
+    width: 127px;
+  }
 }
 
 .fmenu {
@@ -2670,6 +2805,12 @@ input, textarea {
 @media screen and (max-width: 1499.99px) {
   .fmenu__title {
     margin-bottom: 35px;
+  }
+}
+
+@media screen and (max-width: 767.99px) {
+  .fmenu__title {
+    width: 100%;
   }
 }
 

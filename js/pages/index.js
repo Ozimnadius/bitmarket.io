@@ -6,6 +6,13 @@ $(function () {
         $(this).toggleClass('active');
     });
 
+    $('.mmenu-btn__btn').on('click', function (e) {
+        e.preventDefault();
+        $(this).closest('.mmenu-btn').toggleClass('active');
+    });
+
+
+
     $('.menu__more').on('click', function (e) {
         e.stopPropagation();
 
@@ -17,7 +24,7 @@ $(function () {
 
     });
 
-    let slider = new Swiper ('.ibanner__container', {
+    let slider = new Swiper('.ibanner__container', {
         loop: true,
         pagination: {
             el: '.ibanner__pag',
@@ -28,7 +35,9 @@ $(function () {
     $('.menu__link').on('click', function (e) {
         e.stopPropagation();
 
-        if (wWidth<1500) {
+        if (wWidth < 768) {
+            window.location = $(this).attr('href');
+        } else if (wWidth < 1500) {
             e.preventDefault();
             let $this = $(this),
                 item = $this.closest('.menu__item'),
