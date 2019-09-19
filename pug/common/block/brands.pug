@@ -1,0 +1,14 @@
+include ../_mixins
+include ../_settings
+
+div(class='ibrands').slider
+    .slider__top
+        +sliderTitle('Наши бренды')
+    .slider__bottom
+        .swiper-container.slider__container
+            .swiper-wrapper
+                each i in [1,2,3,4,5,6,7,8,9,10]
+                    .swiper-slide.slider__slide
+                        a(href='brands.html').ibrand
+                            .ibrand__img
+                                img(src='images/content/index/brands/'+i+'.png')

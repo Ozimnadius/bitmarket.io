@@ -87,4 +87,25 @@ $(function () {
             }
         }
     });
+
+    let sliderBefore = new Swiper ('.before .slider__container', {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.before .slider__next',
+            prevEl: '.before .slider__prev',
+        },
+        breakpoints: {
+            // when window width is <= 767.99px
+            767.99: {
+                slidesPerView: 1,
+                spaceBetween: 30
+            },
+            // when window width is <= 1499.99px
+            1499.99: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
+        }
+    });
 });

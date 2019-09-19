@@ -10,8 +10,7 @@ $(function () {
         e.preventDefault();
         $(this).closest('.mmenu-btn').toggleClass('active');
     });
-
-
+    
 
     $('.menu__more').on('click', function (e) {
         e.stopPropagation();

@@ -40,7 +40,16 @@ $vh: 1080;
     margin: 0.83em 0;
   }
   h3 {
-    margin: 1em 0;
+    margin-bottom: 25px;
+    font-size: 36px;
+    @include lg-block{
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+    @include sm-block{
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
   }
   h4 {
     margin: 1.33em 0;
@@ -52,7 +61,9 @@ $vh: 1080;
     margin: 2.33em 0;
   }
   p {
-    margin: 1em 0;
+    margin-bottom: 30px;
+    font-weight: 400;
+    line-height: lh(15,30);
   }
 }
 
@@ -75,4 +86,11 @@ $vh: 1080;
   h6 {
     font-size: 0.75rem;
   }
+}
+
+@mixin top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 35px;
 }

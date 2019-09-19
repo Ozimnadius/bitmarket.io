@@ -90,6 +90,7 @@ mixin items(arr, dopClass)
                         .item__buy-title купить товар
                         +icon('cart', 'item__buy-svg')
 
+
 mixin new(arr)
     each i in arr
         a(href='article.html').new
@@ -115,7 +116,7 @@ mixin revs()
                     .rev__prof Генеральный директор холдинга «Кабельный альянс»
                 .rev__link Читать отзыв
 
-mixin slider(title, name)
+mixin slider(title, name, dopClass)
     div(class=name).slider
         .slider__top
             +sliderTitle(title)
@@ -124,7 +125,7 @@ mixin slider(title, name)
                 .swiper-wrapper
                     each i in [1,2,3,4,5,6,7,8]
                         .swiper-slide.slider__slide
-                            +items([1])
+                            +items([1],dopClass)
 mixin sliderTitle(title)
   .slider__title.title= title
   .slider__nav
@@ -133,6 +134,14 @@ mixin sliderTitle(title)
     button(type='button').slider__next.arrow
       +icon('arr-r','arrow__svg')
 
+mixin filterMore()
+    .filter__more
+        button(type='button').filter__more-btn
+            .filter__more-title Показать всё
+            +icon('angle', 'filter__more-svg')
+        button(type='button').filter__more-btn
+            .filter__more-title Скрыть
+            +icon('angle', 'filter__more-svg')
 
 
 

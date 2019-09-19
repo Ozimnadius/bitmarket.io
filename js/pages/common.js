@@ -70,3 +70,5 @@ function Timer(timer) {
 if ($('.timer').length > 0) {
     let timer = new Timer('.timer').start();
 }
+
+$('.select').selectize();

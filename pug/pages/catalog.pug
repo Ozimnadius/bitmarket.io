@@ -1,0 +1,317 @@
+extends ../main
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main.list
+        //- breadcrumbs
+        .container
+            .bread
+                a(href='/').bread__item Главная
+                +icon('angle-r','bread__seporator')
+                a(href='catalog.html').bread__item Каталог товаров
+                +icon('angle-r','bread__seporator')
+                span.bread__item.bread__item_active Каталог товаров
+        //- row
+        section.list__row
+            .container
+                form.list__form
+                    .row
+                        //- left
+                        .left.list__left.catalog__left
+                            //- filters
+                            .list__filters
+                                .filters
+                                    //- title
+                                    .filters__title Фильтр товаров
+                                    //- list
+                                    .filters__list
+                                        //- Производитель
+                                        .filter
+                                            .filter__title Производитель
+                                            .filter__list
+                                                each i in filter1
+                                                    .filter__item
+                                                        .filter__check
+                                                            label.check
+                                                                input(type='checkbox' name='product' value=i).check__input
+                                                                .check__wrap
+                                                                    .check__fake
+                                                                    .check__title= i
+                                                .filter__hidden
+                                                    each i in filter1
+                                                        .filter__item
+                                                            .filter__check
+                                                                label.check
+                                                                    input(type='checkbox' name='product' value=i).check__input
+                                                                    .check__wrap
+                                                                        .check__fake
+                                                                        .check__title= i
+                                            +filterMore()
+                                        //- Стоимость товара
+                                        .filter
+                                            .filter__title Стоимость товара
+                                            .filter__list
+                                                .filter__inputs
+                                                    input(type='text' name='priceFrom' placeholder='от 100').filter__input
+                                                    input(type='text' name='priceTo' placeholder='до 199 000').filter__input
+                                        //- Рейтинг
+                                        .filter
+                                            .filter__title Рейтинг
+                                            .filter__list
+                                                each i in filter3
+                                                    .filter__item
+                                                        .filter__check
+                                                            label.check
+                                                                input(type='checkbox' name='rating' value=i).check__input
+                                                                .check__wrap
+                                                                    .check__fake
+                                                                    .check__rating
+                                                                        .check__stars
+                                                                            each s in [1,2,3,4,5]
+                                                                                div(class=s <= i ? 'active' : '').check__star
+                                                                                    +icon('star', 'check__star-svg')
+                                                                        .check__rating-count (12)
+
+
+
+                                        //- Модель процессора
+                                        .filter
+                                            .filter__title Модель процессора
+                                            .filter__list
+                                                each i in filter4
+                                                    .filter__item
+                                                        .filter__check
+                                                            label.check
+                                                                input(type='checkbox' name='cpu' value=i).check__input
+                                                                .check__wrap
+                                                                    .check__fake
+                                                                    .check__title= i
+                                                .filter__hidden
+                                                    each i in filter4
+                                                        .filter__item
+                                                            .filter__check
+                                                                label.check
+                                                                    input(type='checkbox' name='cpu' value=i).check__input
+                                                                    .check__wrap
+                                                                        .check__fake
+                                                                        .check__title= i
+                                            +filterMore()
+                                        //- Оперативная память
+                                        .filter
+                                            .filter__title Оперативная память
+                                            .filter__list
+                                                each i in filter5
+                                                    .filter__item
+                                                        .filter__check
+                                                            label.check
+                                                                input(type='checkbox' name='ddr' value=i).check__input
+                                                                .check__wrap
+                                                                    .check__fake
+                                                                    .check__title= i
+                                                .filter__hidden
+                                                    each i in filter5
+                                                        .filter__item
+                                                            .filter__check
+                                                                label.check
+                                                                    input(type='checkbox' name='ddr' value=i).check__input
+                                                                    .check__wrap
+                                                                        .check__fake
+                                                                        .check__title= i
+                                            +filterMore()
+
+                                    //- bottom
+                                    .filters__bottom
+                                        button(type='reset').filters__reset.btn.btn_g Сбросить фильтры
+
+                            //- actions
+                            .list__actions
+                                +actions()
+                            //- news
+                            .list__news
+                                .inews
+                                    .inews__top
+                                        .inews__title.title Новости
+                                        a(href='news.html').inews__link.link Смотреть все
+                                    .inews__list
+                                        +new([1,2])
+
+
+                            //- reviews
+                            .list__reviews
+                                +revs()
+                        //- right
+                        .right.list__right.catalog__right
+                            //- categories
+                            .list__categories
+                                div(class='ipopular').slider
+                                    .slider__top
+                                        +sliderTitle('Рубрики каталога')
+                                    .slider__bottom
+                                        .swiper-container.slider__container
+                                            .swiper-wrapper
+                                                each i in ipopular
+                                                    .swiper-slide.slider__slide
+                                                        a(href='list.html').part
+                                                            .part__img
+                                                                +icon(i.svg,'part__svg')
+                                                            .part__title= i.title
+                            //- sale
+                            .list__sale
+                                +slider('Распродажа','isale')
+                            //- top
+                            .list__top
+                                //- sort
+                                .list__sort
+                                    select.sort.select
+                                        option(value='По популярностии') По популярностии
+                                        option(value='По цене') По цене
+
+                                //- filters-btn
+                                .list__filters-btn
+                                    button(type='button').filters-btn
+                                        .filters-btn__title Фильтр товаров
+                                        +icon('filter', 'filters-btn__svg')
+
+                                    .list__filters.list__filters_t
+                                        .filters
+                                            //- title
+                                            .filters__title Фильтр товаров
+                                            //- list
+                                            .filters__list
+                                                //- Производитель
+                                                .filter
+                                                    .filter__title Производитель
+                                                    .filter__list
+                                                        each i in filter1
+                                                            .filter__item
+                                                                .filter__check
+                                                                    label.check
+                                                                        input(type='checkbox' name='product' value=i).check__input
+                                                                        .check__wrap
+                                                                            .check__fake
+                                                                            .check__title= i
+                                                        .filter__hidden
+                                                            each i in filter1
+                                                                .filter__item
+                                                                    .filter__check
+                                                                        label.check
+                                                                            input(type='checkbox' name='product' value=i).check__input
+                                                                            .check__wrap
+                                                                                .check__fake
+                                                                                .check__title= i
+                                                    +filterMore()
+                                                //- Стоимость товара
+                                                .filter
+                                                    .filter__title Стоимость товара
+                                                    .filter__list
+                                                        .filter__inputs
+                                                            input(type='text' name='priceFrom' placeholder='от 100').filter__input
+                                                            input(type='text' name='priceTo' placeholder='до 199 000').filter__input
+                                                //- Рейтинг
+                                                .filter
+                                                    .filter__title Рейтинг
+                                                    .filter__list
+                                                        each i in filter3
+                                                            .filter__item
+                                                                .filter__check
+                                                                    label.check
+                                                                        input(type='checkbox' name='rating' value=i).check__input
+                                                                        .check__wrap
+                                                                            .check__fake
+                                                                            .check__rating
+                                                                                .check__stars
+                                                                                    each s in [1,2,3,4,5]
+                                                                                        div(class=s <= i ? 'active' : '').check__star
+                                                                                            +icon('star', 'check__star-svg')
+                                                                                .check__rating-count (12)
+
+
+
+                                                //- Модель процессора
+                                                .filter
+                                                    .filter__title Модель процессора
+                                                    .filter__list
+                                                        each i in filter4
+                                                            .filter__item
+                                                                .filter__check
+                                                                    label.check
+                                                                        input(type='checkbox' name='cpu' value=i).check__input
+                                                                        .check__wrap
+                                                                            .check__fake
+                                                                            .check__title= i
+                                                        .filter__hidden
+                                                            each i in filter4
+                                                                .filter__item
+                                                                    .filter__check
+                                                                        label.check
+                                                                            input(type='checkbox' name='cpu' value=i).check__input
+                                                                            .check__wrap
+                                                                                .check__fake
+                                                                                .check__title= i
+                                                    +filterMore()
+                                                //- Оперативная память
+                                                .filter
+                                                    .filter__title Оперативная память
+                                                    .filter__list
+                                                        each i in filter5
+                                                            .filter__item
+                                                                .filter__check
+                                                                    label.check
+                                                                        input(type='checkbox' name='ddr' value=i).check__input
+                                                                        .check__wrap
+                                                                            .check__fake
+                                                                            .check__title= i
+                                                        .filter__hidden
+                                                            each i in filter5
+                                                                .filter__item
+                                                                    .filter__check
+                                                                        label.check
+                                                                            input(type='checkbox' name='ddr' value=i).check__input
+                                                                            .check__wrap
+                                                                                .check__fake
+                                                                                .check__title= i
+                                                    +filterMore()
+
+                                            //- bottom
+                                            .filters__bottom
+                                                button(type='reset').filters__reset.btn.btn_g Сбросить фильтры
+
+                                //- count
+                                .list__count
+                                    select.count.select
+                                        option(value='24') 24
+                                        option(value='12') 12
+
+
+                            //- items
+                            .list__items
+                                .row
+                                    +items([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],'item_4')
+                            //- pag
+                            .list__pag
+                                .pag
+                                    a(href='catalog.html').pag__prev.btn.btn_g Предыдущая страница
+                                    a(href='catalog.html').pag__item.btn.btn_g.active 1
+                                    a(href='catalog.html').pag__item.btn.btn_g 2
+                                    a(href='catalog.html').pag__item.btn.btn_g 3
+                                    a(href='catalog.html').pag__next.btn.btn_g Следующая страница
+                            //- content
+                            .list__content.catalog__content
+                                .content
+                                    h3 Заголовок SEO текста
+                                    p Как принято считать, некоторые особенности внутренней политики объединены в целые кластеры себе подобных. Принимая во внимание показатели успешности, глубокий уровень погружения требует от нас анализа переосмысления внешнеэкономических политик. Ясность нашей позиции очевидна: глубокий уровень погружения выявляет срочную потребность новых принципов формирования материально-технической и кадровой базы. Таким образом, понимание сути ресурсосберегающих технологий прекрасно подходит для реализации модели развития.
+                                    p Таким образом, семантический разбор внешних противодействий играет важную роль в формировании инновационных методов управления процессами. Господа, синтетическое тестирование требует определения и уточнения новых принципов формирования материально-технической и кадровой базы.
+                                    p Задача организации, в особенности же реализация намеченных плановых заданий в значительной степени обусловливает важность инновационных методов управления процессами. Но диаграммы связей представлены в исключительно положительном свете. Внедрение современных методик, в своём классическом представлении, допускает внедрение приоритизации разума над эмоциями.
+
+        //- brands
+        section.list__brands
+            .container
+                include ../common/block/brands
+
+
+
+
+
+
