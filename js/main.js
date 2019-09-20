@@ -3,3 +3,4 @@
 //@prepros-append pages/index.js
 //@prepros-append pages/contacts.js
 //@prepros-append pages/filters.js
+//@prepros-append pages/product.js

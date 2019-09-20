@@ -1,0 +1,729 @@
+.product {
+
+  &__top {
+    margin-bottom: 35px;
+    @include lg-block {
+      margin-bottom: 25px;
+    }
+
+    &-row {
+      margin-left: -30px;
+      margin-right: -30px;
+      @include lg-block {
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+    }
+  }
+
+  &__left {
+    @include col;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: calc(46.66667% - 60px);
+    @include lg-block {
+      @include col;
+      margin-bottom: 45px;
+    }
+    @include size-lg(15);
+
+  }
+
+  &__right {
+    @include col;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: calc(53.33333% - 60px);
+    margin-top: -12px;
+    @include lg-block {
+      @include col;
+      margin-top: 0;
+    }
+    @include size-lg(15);
+  }
+
+  &__slider {
+    border-radius: 8px;
+    border: 1px solid $white;
+    background-color: $bg;
+    position: relative;
+
+    &-nav {
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      margin-top: -25px;
+      width: 50px;
+      height: 50px;
+      border: 1px solid $white;
+      background-color: $white2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      outline: none;
+    }
+
+    &-prev {
+      left: 0;
+      border-radius: 0 25px 25px 0;
+      padding-right: 6px;
+    }
+
+    &-next {
+      right: 0;
+      border-radius: 25px 0 0 25px;
+      padding-left: 7px;
+    }
+  }
+
+  &__slide {
+    height: 461px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    //padding: 30px;
+    box-sizing: border-box;
+    @include lg-block {
+      height: 500px;
+    }
+    @include sm-block {
+      height: 195px;
+    }
+
+    &-brand {
+      display: none;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
+
+    &-img {
+      max-height: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: lh(36, 50);
+    margin-bottom: 20px;
+    @include lg-block {
+      display: none;
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+    @include sm-block {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    &_t {
+      display: none;
+      @include lg-block {
+        display: block;
+      }
+
+    }
+  }
+
+  &__controls {
+    margin-bottom: 30px;
+    @include sm-block {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__rating {
+    @include col;
+    @include size(15/2);
+    @include size-lg(15);
+    @include lg-block {
+      margin-bottom: 30px;
+    }
+    @include sm-block {
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &-count {
+      color: rgba($text, .5);
+      font-size: 15px;
+      font-weight: 600;
+      margin-right: 30px;
+      @include sm-block {
+        margin-right: 0;
+      }
+    }
+
+    &-link {
+      line-height: lh(12, 21);
+      @include sm-block {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__stars {
+    display: flex;
+    margin-right: 15px;
+  }
+
+  &__star {
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      .product__star-svg {
+        fill: $yellow;
+      }
+    }
+
+    &-svg {
+      width: 22px;
+      height: 22px;
+      fill: rgba($light-grey2, .3);
+    }
+  }
+
+  &__adds {
+    @include col;
+    @include size(15/2);
+    @include size-lg(15);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__add {
+    width: 170px;
+    height: 60px;
+    @include lg-block {
+      width: 320px;
+    }
+    @include sm-block {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      .product__add-svg {
+        fill: $bg;
+      }
+    }
+
+    &-svg {
+      width: 21px;
+      height: 21px;
+      margin-right: 19px;
+      @include tr3s;
+    }
+  }
+
+  &__left2, &__right2 {
+    @include col;
+    @include size(15/2);
+    @include size-lg(15);
+  }
+
+  &__left2 {
+    @include lg-block {
+      display: none;
+    }
+  }
+
+  &__item {
+    display: flex;
+    color: $black;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-name {
+      width: 57%;
+      padding-right: 10px;
+      font-size: 12px;
+      letter-spacing: 0.48px;
+    }
+
+    &-val {
+      width: 43%;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+    }
+  }
+
+  &__block {
+    border-radius: 8px;
+    border: 1px solid $white;
+    background-color: $white2;
+    //overflow: hidden;
+
+    &-bottom {
+      padding: 30px;
+      @include lg-block {
+        display: flex;
+        align-items: center;
+        padding: 30px 25px;
+      }
+      @include sm-block {
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+    }
+  }
+
+  &__price {
+    border-bottom: 1px solid $white;
+    background-color: $bg;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 25px 20px;
+    @include sm-block {
+      padding-right: 10px;
+    }
+
+    &-title {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: lh(12, 18);
+      letter-spacing: 0.72px;
+      margin-right: 34px;
+      @include lg-block {
+        margin-right: 144px;
+      }
+      @include sm-block {
+        margin-right: 20px;
+      }
+    }
+
+    &-price {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &-val {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      margin-right: 10px;
+      line-height: 1;
+      @include sm-block {
+        font-size: 21px;
+      }
+    }
+
+    &-cur {
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: 0.84px;
+      line-height: 1;
+      @include sm-block {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__selects {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    @include lg-block {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+    @include sm-block {
+      margin-right: 0;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__select {
+    width: 180px;
+    @include lg-block {
+      margin-right: 20px;
+    }
+    @include sm-block {
+      width: 140px;
+      .selectize-dropdown, .selectize-input, .selectize-input input {
+        font-size: 10px;
+      }
+    }
+  }
+
+  &__buys {
+    display: flex;
+    justify-content: space-between;
+    @include lg-block {
+
+    }
+    @include sm-block {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+
+  &__buy, &__one {
+    width: 140px;
+    @include sm-block {
+      width: 100%;
+    }
+  }
+
+  &__one {
+    @include lg-block {
+      margin-right: 20px;
+    }
+    @include sm-block {
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
+  }
+
+  &__sws {
+    display: flex;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid $white;
+    background-color: $white2;
+    overflow: hidden;
+    @include lg-block {
+      display: none;
+    }
+  }
+
+  &__sw {
+    cursor: pointer;
+    width: calc(100% / 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 94px;
+    font-size: 18px;
+    font-weight: 600;
+    border-left: 1px solid $white;
+
+    &:first-child {
+      border-left: none;
+    }
+
+    &.active {
+      border-radius: 8px 8px 0 0;
+      background-color: $bg;
+      border-right: 1px solid $white;
+      border-left: 1px solid $white;
+
+      &:first-child {
+        border-left: none;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+
+      + .product__sw {
+        border-left: none;
+      }
+    }
+  }
+
+  &__tabs {
+    position: relative;
+    @include lg-block {
+      display: none;
+    }
+  }
+
+  &__tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+
+    border-radius: 0 0 8px 8px;
+    border: 1px solid $white;
+    border-top: none;
+    background-color: $bg;
+    padding: 60px;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &-content {
+
+    }
+  }
+
+  &__acco {
+    display: none;
+    @include lg-block {
+      display: block;
+    }
+  }
+
+  &__bottom {
+    margin-bottom: 60px;
+    @include sm-block{
+      margin-bottom: 40px;
+    }
+  }
+
+  &__banner {
+    display: block;
+    margin-bottom: 60px;
+    overflow: hidden;
+    border-radius: 6px;
+
+    @include lg-block {
+      height: 200px;
+      margin-bottom: 50px;
+    }
+    @include sm-block {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 35px;
+    }
+
+    &-img {
+      @include lg-block {
+        max-width: initial;
+        height: 100%;
+        display: none;
+      }
+
+      &_t {
+        display: none;
+        @include lg-block {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__same {
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+    background-color: $white2;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    margin-bottom: 40px;
+    @include sm-block{
+      padding-bottom: 30px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__brands {
+    margin-bottom: 50px;
+    @include sm-block{
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.cnt {
+  width: 100px;
+  height: 50px;
+  border-radius: 6px;
+  border: 1px solid $white;
+  background-color: $bg;
+  display: flex;
+  @include sm-block {
+    width: 80px;
+  }
+
+  &__input {
+    width: 40px;
+    color: $text;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    @include sm-block {
+      width: 30px;
+    }
+  }
+
+  &__btn {
+    width: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include sm-block {
+      width: 30px;
+    }
+
+    &:hover {
+      .cnt__svg {
+        fill: $text;
+        @include sm-block{
+            fill: $white7;
+        }
+      }
+    }
+  }
+
+  &__svg {
+    width: 10px;
+    height: 10px;
+    fill: $white7;
+    @include tr3s;
+  }
+}
+
+.chars {
+
+  &__title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 35px;
+    @include sm-block{
+      margin-bottom: 25px;
+    }
+  }
+
+  &__cols {
+    @include lg-block {
+      border-radius: 8px;
+      border: 1px solid $white;
+      background-color: $white2;
+      padding: 30px;
+    }
+    @include sm-block{
+      padding: 25px 20px;
+      width: 100%;
+      display: block;
+      margin: 0;
+    }
+
+
+  }
+
+  &__col {
+    @include col;
+    @include size(15/3);
+
+    border-radius: 8px;
+    border: 1px solid $white;
+    background-color: $white2;
+    padding: 30px;
+    @include lg-block {
+      padding: 0;
+      border-radius: 0;
+      border: none;
+      background-color: transparent;
+    }
+    @include size-lg(15);
+    @include sm-block{
+      margin: 0;
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.char {
+  margin-bottom: 18px;
+  color: $black;
+  letter-spacing: 0.72px;
+
+  &__name {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  &__val {
+    border-radius: 8px;
+    border: 1px solid $white;
+    background-color: $bg;
+    padding: 23px 25px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: lh(12, 18);
+    @include sm-block{
+      padding: 15px;
+    }
+  }
+}
+
+.pacco {
+
+  &__item {
+    border-radius: 8px;
+    border: 1px solid $white;
+    background-color: $bg;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    padding: 38px 10px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    background-color: $white2;
+    @include tr3s;
+
+    &.active {
+      background-color: $bg;
+
+      &:after {
+        transform: rotate(90deg);
+      }
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      margin-top: -6.5px;
+      width: 8px;
+      height: 13px;
+      background: url("/images/icons/next.png") 0 0 no-repeat;
+      background-size: cover;
+      @include tr3s;
+      @include sm-block{
+        right: 20px;
+      }
+    }
+  }
+
+  &__wrapper {
+    padding: 30px;
+    border-top: 1px solid $white;
+    display: none;
+    @include sm-block{
+      padding: 30px 20px;
+    }
+  }
+}

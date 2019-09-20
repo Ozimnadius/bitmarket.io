@@ -50,11 +50,6 @@ $font-size: 15px;
 @import "sections/header";
 @import "sections/index";
 @import "sections/list";
+@import "sections/product";
 @import "sections/footer";
 
-
-.debug {
-  //@include debug(rgba(0,0,0,0.3), 1px solid red);
-  //z-index: 100;
-  //top: 0;
-}

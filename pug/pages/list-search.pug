@@ -34,18 +34,18 @@ block content
                                                         .filter__check
                                                             label.check
                                                                 input(type='checkbox' name='product' value=i).check__input
-                                                                .check__wrap
-                                                                    .check__fake
-                                                                    .check__title= i
+                                                                span.check__wrap
+                                                                    span.check__fake
+                                                                    span.check__title= i
                                                 .filter__hidden
                                                     each i in filter1
                                                         .filter__item
                                                             .filter__check
                                                                 label.check
                                                                     input(type='checkbox' name='product' value=i).check__input
-                                                                    .check__wrap
-                                                                        .check__fake
-                                                                        .check__title= i
+                                                                    span.check__wrap
+                                                                        span.check__fake
+                                                                        span.check__title= i
                                             +filterMore()
                                         //- Стоимость товара
                                         .filter
@@ -63,14 +63,14 @@ block content
                                                         .filter__check
                                                             label.check
                                                                 input(type='checkbox' name='rating' value=i).check__input
-                                                                .check__wrap
-                                                                    .check__fake
-                                                                    .check__rating
-                                                                        .check__stars
+                                                                span.check__wrap
+                                                                    span.check__fake
+                                                                    span.check__rating
+                                                                        span.check__stars
                                                                             each s in [1,2,3,4,5]
-                                                                                div(class=s <= i ? 'active' : '').check__star
+                                                                                span(class=s <= i ? 'active' : '').check__star
                                                                                     +icon('star', 'check__star-svg')
-                                                                        .check__rating-count (12)
+                                                                        span.check__rating-count (12)
 
 
 
@@ -83,18 +83,18 @@ block content
                                                         .filter__check
                                                             label.check
                                                                 input(type='checkbox' name='cpu' value=i).check__input
-                                                                .check__wrap
-                                                                    .check__fake
-                                                                    .check__title= i
+                                                                span.check__wrap
+                                                                    span.check__fake
+                                                                    span.check__title= i
                                                 .filter__hidden
                                                     each i in filter4
                                                         .filter__item
                                                             .filter__check
                                                                 label.check
                                                                     input(type='checkbox' name='cpu' value=i).check__input
-                                                                    .check__wrap
-                                                                        .check__fake
-                                                                        .check__title= i
+                                                                    span.check__wrap
+                                                                        span.check__fake
+                                                                        span.check__title= i
                                             +filterMore()
                                         //- Оперативная память
                                         .filter
@@ -105,18 +105,18 @@ block content
                                                         .filter__check
                                                             label.check
                                                                 input(type='checkbox' name='ddr' value=i).check__input
-                                                                .check__wrap
-                                                                    .check__fake
-                                                                    .check__title= i
+                                                                span.check__wrap
+                                                                    span.check__fake
+                                                                    span.check__title= i
                                                 .filter__hidden
                                                     each i in filter5
                                                         .filter__item
                                                             .filter__check
                                                                 label.check
                                                                     input(type='checkbox' name='ddr' value=i).check__input
-                                                                    .check__wrap
-                                                                        .check__fake
-                                                                        .check__title= i
+                                                                    span.check__wrap
+                                                                        span.check__fake
+                                                                        span.check__title= i
                                             +filterMore()
 
                                     //- bottom
@@ -141,9 +141,8 @@ block content
                                 //- filters-btn
                                 .list__filters-btn
                                     button(type='button').filters-btn
-                                        .filters-btn__title Фильтр товаров
+                                        span.filters-btn__title Фильтр товаров
                                         +icon('filter', 'filters-btn__svg')
-
                                     .list__filters.list__filters_t
                                         .filters
                                             //- title
@@ -159,18 +158,18 @@ block content
                                                                 .filter__check
                                                                     label.check
                                                                         input(type='checkbox' name='product' value=i).check__input
-                                                                        .check__wrap
-                                                                            .check__fake
-                                                                            .check__title= i
+                                                                        span.check__wrap
+                                                                            span.check__fake
+                                                                            span.check__title= i
                                                         .filter__hidden
                                                             each i in filter1
                                                                 .filter__item
                                                                     .filter__check
                                                                         label.check
                                                                             input(type='checkbox' name='product' value=i).check__input
-                                                                            .check__wrap
-                                                                                .check__fake
-                                                                                .check__title= i
+                                                                            span.check__wrap
+                                                                                span.check__fake
+                                                                                span.check__title= i
                                                     +filterMore()
                                                 //- Стоимость товара
                                                 .filter
@@ -188,14 +187,14 @@ block content
                                                                 .filter__check
                                                                     label.check
                                                                         input(type='checkbox' name='rating' value=i).check__input
-                                                                        .check__wrap
-                                                                            .check__fake
-                                                                            .check__rating
-                                                                                .check__stars
+                                                                        span.check__wrap
+                                                                            span.check__fake
+                                                                            span.check__rating
+                                                                                span.check__stars
                                                                                     each s in [1,2,3,4,5]
-                                                                                        div(class=s <= i ? 'active' : '').check__star
+                                                                                        span(class=s <= i ? 'active' : '').check__star
                                                                                             +icon('star', 'check__star-svg')
-                                                                                .check__rating-count (12)
+                                                                                span.check__rating-count (12)
 
 
 
@@ -208,18 +207,18 @@ block content
                                                                 .filter__check
                                                                     label.check
                                                                         input(type='checkbox' name='cpu' value=i).check__input
-                                                                        .check__wrap
-                                                                            .check__fake
-                                                                            .check__title= i
+                                                                        span.check__wrap
+                                                                            span.check__fake
+                                                                            span.check__title= i
                                                         .filter__hidden
                                                             each i in filter4
                                                                 .filter__item
                                                                     .filter__check
                                                                         label.check
                                                                             input(type='checkbox' name='cpu' value=i).check__input
-                                                                            .check__wrap
-                                                                                .check__fake
-                                                                                .check__title= i
+                                                                            span.check__wrap
+                                                                                span.check__fake
+                                                                                span.check__title= i
                                                     +filterMore()
                                                 //- Оперативная память
                                                 .filter
@@ -230,18 +229,18 @@ block content
                                                                 .filter__check
                                                                     label.check
                                                                         input(type='checkbox' name='ddr' value=i).check__input
-                                                                        .check__wrap
-                                                                            .check__fake
-                                                                            .check__title= i
+                                                                        span.check__wrap
+                                                                            span.check__fake
+                                                                            span.check__title= i
                                                         .filter__hidden
                                                             each i in filter5
                                                                 .filter__item
                                                                     .filter__check
                                                                         label.check
                                                                             input(type='checkbox' name='ddr' value=i).check__input
-                                                                            .check__wrap
-                                                                                .check__fake
-                                                                                .check__title= i
+                                                                            span.check__wrap
+                                                                                span.check__fake
+                                                                                span.check__title= i
                                                     +filterMore()
 
                                             //- bottom

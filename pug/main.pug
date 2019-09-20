@@ -60,7 +60,7 @@ html(lang="ru")
                             //- logo
                             .header__logo
                                 a(href='/').logo
-                                    img(src='images/logo.png').logo__img
+                                    img(src='images/logo.png' alt='lorem').logo__img
 
                             //- contacts
                             .header__contacts
@@ -138,8 +138,8 @@ html(lang="ru")
 
 
                                         button(type='button').menu__more
-                                            .menu__more-text Показать полностью
-                                            .menu__more-text Скрыть
+                                            span.menu__more-text Показать полностью
+                                            span.menu__more-text Скрыть
                             .header__nav
                                 .nav
                                     each i in nav
@@ -178,7 +178,7 @@ html(lang="ru")
                             //- logo
                             .footer__logo
                                 a(href='/').logo
-                                    img(src='images/logo.png').logo__img
+                                    img(src='images/logo.png' alt='lorem').logo__img
 
                             //- contacts
                             .footer__contacts
@@ -238,32 +238,7 @@ html(lang="ru")
                     .container
                         .footer__copy © Все права защищены 2019
 
-    .debug
-        div
-            div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
 
-
-
-    script(src='js/vendor.min.js')
-    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
-    script(src='js/main.min.js')
+        script(src='js/vendor.min.js')
+        script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+        script(src='js/main.min.js')

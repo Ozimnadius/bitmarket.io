@@ -7,13 +7,13 @@ mixin iconPath(iconPath,iconName, iconClass)
         use(xlink:href=`${iconPath}/sprite.svg#${iconName}`)
 
 mixin image(imagePath, imageAlt, imageClass)
-    img(src=`/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+    img(src=`${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
 
 mixin blog(arr)
     .blog
         each i in arr
             a(href='news.html').blog__item
-                img(src='images/content/blog/' + i + '.jpg').blog__img
+                img(src='images/content/blog/' + i + '.jpg' alt='lorem').blog__img
 
 mixin actions()
     .actions
@@ -38,12 +38,12 @@ mixin items(arr, dopClass)
             .item__top
                 //- img
                 .item__img
-                    img(src='images/content/products/img.jpg').item__img
+                    img(src='images/content/products/img.jpg' alt='lorem').item__img
                 //- controls
                 .item__controls
-                    button(type='button').item__control.jsFavorite
+                    .item__control.jsFavorite
                         +icon('heart', 'item__control-svg')
-                    button(type='button').item__control.jsCompare
+                    .item__control.jsCompare
                         +icon('recycle', 'item__control-svg')
 
             //- bottom
@@ -85,8 +85,8 @@ mixin items(arr, dopClass)
 
                 //- buttons {
                 .item__buttons
-                    button(type='button').btn.btn_g.item__one купить в 1 клик
-                    button(type='button').item__buy
+                    .btn.btn_g.item__one.jsItemOne купить в 1 клик
+                    .item__buy.jsItemBuy
                         .item__buy-title купить товар
                         +icon('cart', 'item__buy-svg')
 
@@ -95,7 +95,7 @@ mixin new(arr)
     each i in arr
         a(href='article.html').new
             .new__img
-                img(src='images/content/news/img.jpg').new__pic
+                img(src='images/content/news/img.jpg' alt='lorem').new__pic
                 .new__date 11.08.19
             .new__content
                 .new__title Гаджеты для современных школьников
@@ -110,7 +110,7 @@ mixin revs()
             a(href='reviw.html').rev
                 .rev__top
                     .rev__img
-                        img(src='images/content/reviews/img.jpg').rev__pic
+                        img(src='images/content/reviews/img.jpg' alt='lorem').rev__pic
                 .rev__bottom
                     .rev__author Рудой Аркадий
                     .rev__prof Генеральный директор холдинга «Кабельный альянс»
@@ -137,10 +137,10 @@ mixin sliderTitle(title)
 mixin filterMore()
     .filter__more
         button(type='button').filter__more-btn
-            .filter__more-title Показать всё
+            span.filter__more-title Показать всё
             +icon('angle', 'filter__more-svg')
         button(type='button').filter__more-btn
-            .filter__more-title Скрыть
+            span.filter__more-title Скрыть
             +icon('angle', 'filter__more-svg')
 
 

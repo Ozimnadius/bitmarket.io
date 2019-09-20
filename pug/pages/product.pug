@@ -1,0 +1,216 @@
+extends ../main
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main.product
+        //- breadcrumbs
+        .container
+            .bread
+                a(href='/').bread__item Главная
+                +icon('angle-r','bread__seporator')
+                a(href='catalog.html').bread__item Каталог товаров
+                +icon('angle-r','bread__seporator')
+                span.bread__item.bread__item_active Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb
+
+        //- top
+        section.product__top
+            .container
+                .product__title.product__title_t Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb
+                .row.product__top-row
+                    //- left
+                    .product__left
+                        .product__slider
+                            .swiper-container.product__container
+                                .swiper-wrapper
+                                    each i in [1,2,3]
+                                        .swiper-slide.product__slide
+                                            //+image('images/content/products/brand.png','lorem','product__slide-brand')
+                                            +image('images/content/products/product.jpg','lorem','product__slide-img')
+
+                            .product__slider-nav.product__slider-prev
+                                +image('images/icons/prev.png','lorem','.product__slider-img')
+                            .product__slider-nav.product__slider-next
+                                +image('images/icons/next.png','lorem','.product__slider-img')
+
+                    //- right
+                    form.product__right
+                        //- title
+                        .product__title Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb
+                        //- controls
+                        .product__controls
+                            .row
+                                //- rating
+                                .product__rating
+                                    .product__stars
+                                        .product__star.active
+                                            +icon('star', 'product__star-svg')
+                                        .product__star.active
+                                            +icon('star', 'product__star-svg')
+                                        .product__star.active
+                                            +icon('star', 'product__star-svg')
+                                        .product__star.active
+                                            +icon('star', 'product__star-svg')
+                                        .product__star
+                                            +icon('star', 'product__star-svg')
+                                    .product__rating-count (12)
+                                    a(href='').product__rating-link.link Посмотреть отзывы
+                                //- adds
+                                .product__adds
+                                    a(href='cabinet.html').product__add.btn.btn_g
+                                        +icon('recycle', 'product__add-svg')
+                                        .product__add-title В сравнение
+                                    a(href='cabinet.html').product__add.btn.btn_g
+                                        +icon('heart', 'product__add-svg')
+                                        .product__add-title В избранное
+
+                        //- row
+                        .product__row
+                            .row
+                                //- left2
+                                .product__left2
+                                    .product__list
+                                        each i in productList
+                                            .product__item
+                                                .product__item-name= i.name
+                                                .product__item-val= i.val
+
+                                //- right2
+                                .product__right2
+                                    .product__block
+                                        //- price
+                                        .product__price
+                                            .product__price-title
+                                                | Стоимость
+                                                br
+                                                | товара:
+                                            .product__price-price
+                                                .product__price-val 254 040
+                                                .product__price-cur руб.
+
+
+                                        //- bottom
+                                        .product__block-bottom
+                                            //- selects
+                                            .product__selects
+                                                select.select.product__select
+                                                    option(value='') Выберите цвет
+                                                    option(value='Красный') Красный
+                                                    option(value='Черный') Черный
+                                                .product__count
+                                                    .cnt
+                                                        button(type='button').cnt__btn.cnt__minus
+                                                            +icon('minus','cnt__svg')
+                                                        input(type='text' name='count' value=1 readonly=true).cnt__input
+                                                        button(type='button').cnt__btn.cnt__plus
+                                                            +icon('plus','cnt__svg')
+
+                                            //- buys
+                                            .product__buys
+                                                button(type='button').btn.btn_w.product__one.jsItemOne Купить в 1 клик
+                                                button(type='button').btn.btn_r.product__buy.jsItemBuy Купить товар
+
+        //- tabs
+        section.product__bottom
+            .container
+                //- switches
+                .product__sws
+                    each i,x in productSws
+                        button(type='button' class=i.dopClass data-id=x + 1).product__sw= i.title
+
+                //- tabs
+                .product__tabs
+                    div(data-id=1).active.product__tab
+                        .product__content
+                            .content
+                                h4 Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb
+                                p Как принято считать, некоторые особенности внутренней политики объединены в целые кластеры себе подобных. Принимая во внимание показатели успешности, глубокий уровень погружения требует от нас анализа переосмысления внешнеэкономических политик. Ясность нашей позиции очевидна: глубокий уровень погружения выявляет срочную потребность новых принципов формирования материально-технической и кадровой базы. Таким образом, понимание сути ресурсосберегающих технологий прекрасно подходит для реализации модели развития.
+                                p Таким образом, семантический разбор внешних противодействий играет важную роль в формировании инновационных методов управления процессами. Господа, синтетическое тестирование требует определения и уточнения новых принципов формирования материально-технической и кадровой базы.
+                        .product__chars
+                            .chars
+                                .chars__title Характеристики
+                                .row.chars__cols
+                                    each col in productChars
+                                        .chars__col
+                                            each i in col
+                                                .char
+                                                    .char__name= i.name
+                                                    .char__val= i.val
+
+
+
+                    div(data-id=2).product__tab
+                        .product__tab-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, quisquam.
+                    div(data-id=3).product__tab
+                        .product__tab-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus dolore error illo in iure iusto libero, natus quibusdam ullam.
+                    div(data-id=4).product__tab
+                        .product__tab-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dignissimos maiores nisi officia quidem ratione voluptas voluptatibus. Ad assumenda atque corporis, dolorum neque odit perspiciatis placeat provident quae quasi quia veniam voluptate. A accusamus architecto consequatur dolorum itaque natus repudiandae ullam ut! Aut esse natus optio quos sed tempore vero!
+                    div(data-id=5).product__tab
+                        .product__tab-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eligendi error in magnam repellat. Atque eaque ex ipsam nesciunt nobis praesentium reiciendis. Adipisci consequatur corporis doloremque dolores eos fuga illum laboriosam nostrum odio perferendis provident reiciendis repellat repudiandae, rerum similique.
+
+                //- acco
+                .product__acco
+                    .pacco
+                        .pacco__item
+                            button(type='button').pacco__btn
+                                .pacco__btn-title Описание товара
+                            .pacco__wrapper
+                                .product__content
+                                    .content
+                                        h4 Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb
+                                        p Как принято считать, некоторые особенности внутренней политики объединены в целые кластеры себе подобных. Принимая во внимание показатели успешности, глубокий уровень погружения требует от нас анализа переосмысления внешнеэкономических политик. Ясность нашей позиции очевидна: глубокий уровень погружения выявляет срочную потребность новых принципов формирования материально-технической и кадровой базы. Таким образом, понимание сути ресурсосберегающих технологий прекрасно подходит для реализации модели развития.
+                                        p Таким образом, семантический разбор внешних противодействий играет важную роль в формировании инновационных методов управления процессами. Господа, синтетическое тестирование требует определения и уточнения новых принципов формирования материально-технической и кадровой базы.
+                                .product__chars
+                                    .chars
+                                        .chars__title Характеристики
+                                        .row.chars__cols
+                                            each col in productChars
+                                                .chars__col
+                                                    each i in col
+                                                        .char
+                                                            .char__name= i.name
+                                                            .char__val= i.val
+
+
+
+                        .pacco__item
+                            button(type='button').pacco__btn
+                                .pacco__btn-title Отзывы о товаре
+                            .pacco__wrapper
+                                |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, quisquam.
+                        .pacco__item
+                            button(type='button').pacco__btn
+                                .pacco__btn-title Коментарии
+                            .pacco__wrapper
+                                |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus dolore error illo in iure iusto libero, natus quibusdam ullam.
+                        .pacco__item
+                            button(type='button').pacco__btn
+                                .pacco__btn-title Скачать драйвера
+                            .pacco__wrapper
+                                |Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dignissimos maiores nisi officia quidem ratione voluptas voluptatibus. Ad assumenda atque corporis, dolorum neque odit perspiciatis placeat provident quae quasi quia veniam voluptate. A accusamus architecto consequatur dolorum itaque natus repudiandae ullam ut! Aut esse natus optio quos sed tempore vero!
+                        .pacco__item
+                            button(type='button').pacco__btn
+                                .pacco__btn-title Видео и фото
+                            .pacco__wrapper
+                                |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eligendi error in magnam repellat. Atque eaque ex ipsam nesciunt nobis praesentium reiciendis. Adipisci consequatur corporis doloremque dolores eos fuga illum laboriosam nostrum odio perferendis provident reiciendis repellat repudiandae, rerum similique.
+
+        //- banner
+        .container
+            a(href='product.html').product__banner
+                img(src='images/content/products/product-banner.jpg' alt='lorem').product__banner-img
+                img(src='images/content/products/banner.jpg' alt='lorem').product__banner-img.product__banner-img_t
+        //- same
+        .product__same
+            .container
+                +slider('Похожие товары','psame','item_s')
+        //- brands
+        section.product__brands
+            .container
+                include ../common/block/brands
+
+
+
+
+
+

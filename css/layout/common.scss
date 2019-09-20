@@ -99,6 +99,9 @@
     position: relative;
     display: flex;
     align-items: center;
+    @include sm-block{
+      padding-right: 10px;
+    }
 
     &:after {
       content: '';
