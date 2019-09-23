@@ -130,6 +130,7 @@ if ($('.timer').length > 0) {
     let timer = new Timer('.timer').start();
 }
 
+
 $('.select').selectize();
 
 $('.cnt__btn').on('click', function (e) {
@@ -137,12 +138,66 @@ $('.cnt__btn').on('click', function (e) {
         cnt = btn.closest('.cnt'),
         count = cnt.find('.cnt__input'),
         val = count.val();
-    if(btn.hasClass('cnt__plus')){
+    if (btn.hasClass('cnt__plus')) {
         val++
     } else {
-        if (val>1){
+        if (val > 1) {
             val--
         }
     }
     count.val(val);
+
+    if (btn.hasClass('order__cnt-btn')) {
+        calcTotal();
+    }
+});
+
+//-Корзина
+let cart = $('.cart'),
+    cartCount = cart.find('.cart__count-val'),
+    cartPrice = cart.find('.cart__price-val');
+
+$('.oitem__delete').on('click', function (e) {
+    $(this).closest('.oitem').remove();
+    calcTotal();
+});
+
+function calcTotal() {
+    let items = $('.oitem'),
+        infoCount = $('.oinfo__left .oinfo__val-val'),
+        infoPrice = $('.oinfo__right .oinfo__val-val'),
+        totalCount = $('.ototal__item_price .ototal__item-val'),
+        totalPrice = $('.ototal__price-val'),
+        count = 0,
+        total = 0;
+
+
+    items.each(function (x, i) {
+        let item = $(i),
+            price = Number(item.data('price')),
+            num = Number(item.find('.cnt__input').val()),
+            sum = price * num;
+        count += num;
+        total += sum;
+    });
+
+    total = number_format(total, '', '', ' ');
+
+    cartCount.text(count);
+    cartPrice.text(total);
+    infoCount.text(count + ' ');
+    infoPrice.text(total);
+    totalCount.text(count + ' шт.');
+    totalPrice.text(total);
+
+}
+
+$('.file__input').on('change', function (e) {
+    let input = $(this),
+        val = input.val(),
+        item = input.closest('.file'),
+        text = item.find('.file__title'),
+        file = val.replace(/\\/g, '/').split('/').pop();
+    text.text(file);
+
 });

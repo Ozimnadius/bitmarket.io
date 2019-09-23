@@ -343,360 +343,298 @@
         </div>
       </header>
       <div class="page">
-        <main class="product">
+        <main class="order">
           <div class="container">
             <div class="bread"><a class="bread__item" href="/">Главная</a>
               <svg class="bread__seporator">
                 <use xlink:href="/images/icons/sprite.svg#angle-r"></use>
-              </svg><a class="bread__item" href="catalog.html">Каталог товаров</a>
-              <svg class="bread__seporator">
-                <use xlink:href="/images/icons/sprite.svg#angle-r"></use>
-              </svg><span class="bread__item bread__item_active">Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb</span>
+              </svg><span class="bread__item bread__item_active">Оформление заказа</span>
             </div>
           </div>
-          <section class="product__top">
-            <div class="container">
-              <div class="product__title product__title_t">Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb</div>
-              <div class="row product__top-row">
-                <div class="product__left">
-                  <div class="product__slider">
-                    <div class="swiper-container product__container">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide product__slide">
-                          <!--+image('images/content/products/brand.png','lorem','product__slide-brand')--><img class="product__slide-img" src="images/content/products/product.jpg" alt="lorem"/>
+          <section class="order__top">
+            <form class="order__form">
+              <div class="container">
+                <div class="order__title">Оформление заказа</div>
+                <div class="row">
+                  <div class="right order__left">
+                    <div class="order__list">
+                      <div class="order__item oitem" data-id="1" data-price="12290">
+                        <div class="oitem__img"><img class="oitem__pic" src="images/content/products/img.jpg" alt="lorem"/>
                         </div>
-                        <div class="swiper-slide product__slide">
-                          <!--+image('images/content/products/brand.png','lorem','product__slide-brand')--><img class="product__slide-img" src="images/content/products/product.jpg" alt="lorem"/>
+                        <div class="oitem__wrap">
+                          <div class="oitem__left"><a class="oitem__title" href="product.html">Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb</a></div>
+                          <div class="oitem__right">
+                            <div class="oitem__count">
+                              <div class="cnt order__cnt">
+                                <button class="cnt__btn cnt__minus order__cnt-btn" type="button">
+                                  <svg class="cnt__svg">
+                                    <use xlink:href="/images/icons/sprite.svg#minus"></use>
+                                  </svg>
+                                </button>
+                                <input class="cnt__input" type="text" name="count1" value="1" readonly>
+                                <button class="cnt__btn cnt__plus order__cnt-btn" type="button">
+                                  <svg class="cnt__svg">
+                                    <use xlink:href="/images/icons/sprite.svg#plus"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="oitem__price">
+                              <div class="oitem__price-title">Стоимость<br>товара:</div>
+                              <div class="oitem__price-val">12.290</div>
+                              <div class="oitem__price-cur">руб.</div>
+                            </div>
+                            <div class="oitem__adds">
+                              <button class="oitem__add">
+                                <svg class="oitem__add-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                                </svg>
+                              </button>
+                              <button class="oitem__add">
+                                <svg class="oitem__add-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#recycle"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="oitem__remove">
+                              <button class="btn btn_r oitem__delete" type="button">Удалить</button>
+                            </div>
+                          </div>
                         </div>
-                        <div class="swiper-slide product__slide">
-                          <!--+image('images/content/products/brand.png','lorem','product__slide-brand')--><img class="product__slide-img" src="images/content/products/product.jpg" alt="lorem"/>
+                      </div>
+                      <div class="order__item oitem" data-id="2" data-price="12290">
+                        <div class="oitem__img"><img class="oitem__pic" src="images/content/products/img.jpg" alt="lorem"/>
+                        </div>
+                        <div class="oitem__wrap">
+                          <div class="oitem__left"><a class="oitem__title" href="product.html">Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb</a></div>
+                          <div class="oitem__right">
+                            <div class="oitem__count">
+                              <div class="cnt order__cnt">
+                                <button class="cnt__btn cnt__minus order__cnt-btn" type="button">
+                                  <svg class="cnt__svg">
+                                    <use xlink:href="/images/icons/sprite.svg#minus"></use>
+                                  </svg>
+                                </button>
+                                <input class="cnt__input" type="text" name="count1" value="1" readonly>
+                                <button class="cnt__btn cnt__plus order__cnt-btn" type="button">
+                                  <svg class="cnt__svg">
+                                    <use xlink:href="/images/icons/sprite.svg#plus"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="oitem__price">
+                              <div class="oitem__price-title">Стоимость<br>товара:</div>
+                              <div class="oitem__price-val">12.290</div>
+                              <div class="oitem__price-cur">руб.</div>
+                            </div>
+                            <div class="oitem__adds">
+                              <button class="oitem__add">
+                                <svg class="oitem__add-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                                </svg>
+                              </button>
+                              <button class="oitem__add">
+                                <svg class="oitem__add-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#recycle"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="oitem__remove">
+                              <button class="btn btn_r oitem__delete" type="button">Удалить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__item oitem" data-id="3" data-price="12290">
+                        <div class="oitem__img"><img class="oitem__pic" src="images/content/products/img.jpg" alt="lorem"/>
+                        </div>
+                        <div class="oitem__wrap">
+                          <div class="oitem__left"><a class="oitem__title" href="product.html">Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb</a></div>
+                          <div class="oitem__right">
+                            <div class="oitem__count">
+                              <div class="cnt order__cnt">
+                                <button class="cnt__btn cnt__minus order__cnt-btn" type="button">
+                                  <svg class="cnt__svg">
+                                    <use xlink:href="/images/icons/sprite.svg#minus"></use>
+                                  </svg>
+                                </button>
+                                <input class="cnt__input" type="text" name="count1" value="1" readonly>
+                                <button class="cnt__btn cnt__plus order__cnt-btn" type="button">
+                                  <svg class="cnt__svg">
+                                    <use xlink:href="/images/icons/sprite.svg#plus"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="oitem__price">
+                              <div class="oitem__price-title">Стоимость<br>товара:</div>
+                              <div class="oitem__price-val">12.290</div>
+                              <div class="oitem__price-cur">руб.</div>
+                            </div>
+                            <div class="oitem__adds">
+                              <button class="oitem__add">
+                                <svg class="oitem__add-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                                </svg>
+                              </button>
+                              <button class="oitem__add">
+                                <svg class="oitem__add-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#recycle"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="oitem__remove">
+                              <button class="btn btn_r oitem__delete" type="button">Удалить</button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="product__slider-nav product__slider-prev"><img class=".product__slider-img" src="images/icons/prev.png" alt="lorem"/>
+                    <div class="order__controls">
+                      <button class="order__add" type="button"><span class="order__add-plus">
+                          <svg class="order__add-svg">
+                            <use xlink:href="/images/icons/sprite.svg#plus2"></use>
+                          </svg></span><span class="order__add-title">Добавить товар</span></button>
+                      <button class="order__print" type="button"><img class="order__print-img" src="images/icons/printer.png" alt="lorem"/><span class="order__print-title">Распечатать заказ</span>
+                      </button>
+                      <div class="order__info oinfo">
+                        <div class="oinfo__left">
+                          <div class="oinfo__name">Кол-во:</div>
+                          <div class="oinfo__val"><span class="oinfo__val-val">3&nbsp;</span><span class="oinfo__val-type">шт.</span></div>
+                        </div>
+                        <div class="oinfo__right">
+                          <div class="oinfo__name">Стоимость:</div>
+                          <div class="oinfo__val"><span class="oinfo__val-val">36 870&nbsp;</span><span class="oinfo__val-type">руб.</span></div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="product__slider-nav product__slider-next"><img class=".product__slider-img" src="images/icons/next.png" alt="lorem"/>
+                    <div class="order__data">
+                      <div class="odata">
+                        <div class="odata__row">
+                          <div class="odata__title">
+                            <div class="odata__title-text">Данные юр.лица</div>
+                          </div>
+                          <div class="odata__fields row">
+                            <div class="odata__field odata__field_6">
+                              <input class="input" type="text" name="name" placeholder="Название компании / ФИО для ИП">
+                            </div>
+                            <div class="odata__field odata__field_3">
+                              <input class="input" type="text" name="inn" placeholder="ИНН">
+                            </div>
+                            <div class="odata__field odata__field_3">
+                              <label class="file">
+                                <input class="file__input" type="file" name="file"><span class="file__fake"><span class="file__btn"><img class="file__img" src="images/icons/clip.png" alt="lorem"/></span><span class="file__title">Прикрепить реквизиты ИП или компании.</span></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="odata__row">
+                          <div class="odata__title">
+                            <div class="odata__title-text">Доставка</div>
+                          </div>
+                          <div class="odata__fields row">
+                            <div class="odata__field odata__field_6">
+                              <input class="input" type="text" name="delivery" placeholder="Выберите вариант доставки">
+                            </div>
+                            <div class="odata__field odata__field_2">
+                              <input class="input" type="text" name="city" placeholder="Город">
+                            </div>
+                            <div class="odata__field odata__field_2">
+                              <input class="input" type="text" name="street" placeholder="Улица">
+                            </div>
+                            <div class="odata__field odata__field_1">
+                              <input class="input" type="text" name="house" placeholder="Дом">
+                            </div>
+                            <div class="odata__field odata__field_1">
+                              <input class="input" type="text" name="room" placeholder="Кв.">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="odata__row">
+                          <div class="odata__title">
+                            <div class="odata__title-text title">Оплата</div><a class="odata__title-link link" href="about.html">Подробнее</a>
+                          </div>
+                          <div class="odata__types">
+                            <div class="row">
+                              <label class="odata__type">
+                                <input class="odata__type-input" type="radio" name="types" value="1"><span class="odata__type-fake"><img class="odata__type-img" src="images/icons/mastercard.png" alt="lorem"/><span class="odata__type-title">Банковской картой</span></span>
+                              </label>
+                              <label class="odata__type">
+                                <input class="odata__type-input" type="radio" name="types" value="2"><span class="odata__type-fake"><img class="odata__type-img" src="images/icons/mastercard.png" alt="lorem"/><span class="odata__type-title">Банковской картой</span></span>
+                              </label>
+                              <label class="odata__type">
+                                <input class="odata__type-input" type="radio" name="types" value="3"><span class="odata__type-fake"><img class="odata__type-img" src="images/icons/mastercard.png" alt="lorem"/><span class="odata__type-title">Банковской картой</span></span>
+                              </label>
+                              <label class="odata__type">
+                                <input class="odata__type-input" type="radio" name="types" value="4"><span class="odata__type-fake"><img class="odata__type-img" src="images/icons/mastercard.png" alt="lorem"/><span class="odata__type-title">Банковской картой</span></span>
+                              </label>
+                              <label class="odata__type">
+                                <input class="odata__type-input" type="radio" name="types" value="5"><span class="odata__type-fake"><img class="odata__type-img" src="images/icons/mastercard.png" alt="lorem"/><span class="odata__type-title">Банковской картой</span></span>
+                              </label>
+                              <label class="odata__type">
+                                <input class="odata__type-input" type="radio" name="types" value="6"><span class="odata__type-fake"><img class="odata__type-img" src="images/icons/mastercard.png" alt="lorem"/><span class="odata__type-title">Банковской картой</span></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="order__buttons"><a class="btn btn_g order__link order__btn" href="catalog.html" data-text="Вернуться к выбору товаров">Продолжить выбор</a><a class="btn btn_r order__buy order__btn" href="/" data-text="Полноценное оформление товаров">Оформить заказ</a>
+                      <button class="btn btn_g order__one order__btn" type="button" data-text="Вам потребуется указать только номер телефона и имя">Быстрый заказ</button>
+                    </div>
+                  </div>
+                  <div class="left order__right">
+                    <div class="order__total">
+                      <div class="ototal">
+                        <div class="ototal__title">Итого по заказу</div>
+                        <div class="ototal__list">
+                          <div class="ototal__item_price ototal__item">
+                            <div class="ototal__item-name">Всего товаров:</div>
+                            <div class="ototal__item-val">3 шт.</div>
+                          </div>
+                          <div class="ototal__item">
+                            <div class="ototal__item-name">Скидка:</div>
+                            <div class="ototal__item-val">0 руб.</div>
+                          </div>
+                          <div class="ototal__item">
+                            <div class="ototal__item-name">Доставка, руб.:</div>
+                            <div class="ototal__item-val">350 руб.</div>
+                          </div>
+                        </div>
+                        <div class="ototal__bottom">
+                          <div class="ototal__list ototal__list_t">
+                            <div class="ototal__item">
+                              <div class="ototal__item-name">Всего товаров:</div>
+                              <div class="ototal__item-val">3 шт.</div>
+                            </div>
+                            <div class="ototal__item">
+                              <div class="ototal__item-name">Скидка:</div>
+                              <div class="ototal__item-val">0 руб.</div>
+                            </div>
+                            <div class="ototal__item">
+                              <div class="ototal__item-name">Доставка, руб.:</div>
+                              <div class="ototal__item-val">350 руб.</div>
+                            </div>
+                          </div>
+                          <div class="ototal__price">
+                            <div class="ototal__sub">Итого к оплате:</div>
+                            <div class="ototal__price-wrap"><span class="ototal__price-val">37 220&nbsp;</span><span class="ototal__price-cur">руб.</span></div>
+                          </div><a class="btn btn_r ototal__btn" href="/">Подтвердить заказ</a>
+                          <div class="ototal__desc">Нажимая на кнопку, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с Условиями, а так же с Условиями продажи.</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <form class="product__right">
-                  <div class="product__title">Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb</div>
-                  <div class="product__controls">
-                    <div class="row">
-                      <div class="product__rating">
-                        <div class="product__stars">
-                          <div class="product__star active">
-                            <svg class="product__star-svg">
-                              <use xlink:href="/images/icons/sprite.svg#star"></use>
-                            </svg>
-                          </div>
-                          <div class="product__star active">
-                            <svg class="product__star-svg">
-                              <use xlink:href="/images/icons/sprite.svg#star"></use>
-                            </svg>
-                          </div>
-                          <div class="product__star active">
-                            <svg class="product__star-svg">
-                              <use xlink:href="/images/icons/sprite.svg#star"></use>
-                            </svg>
-                          </div>
-                          <div class="product__star active">
-                            <svg class="product__star-svg">
-                              <use xlink:href="/images/icons/sprite.svg#star"></use>
-                            </svg>
-                          </div>
-                          <div class="product__star">
-                            <svg class="product__star-svg">
-                              <use xlink:href="/images/icons/sprite.svg#star"></use>
-                            </svg>
-                          </div>
-                        </div>
-                        <div class="product__rating-count">(12)</div><a class="product__rating-link link" href="">Посмотреть отзывы</a>
-                      </div>
-                      <div class="product__adds"><a class="product__add btn btn_g" href="cabinet.html">
-                          <svg class="product__add-svg">
-                            <use xlink:href="/images/icons/sprite.svg#recycle"></use>
-                          </svg>
-                          <div class="product__add-title">В сравнение</div></a><a class="product__add btn btn_g" href="cabinet.html">
-                          <svg class="product__add-svg">
-                            <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                          </svg>
-                          <div class="product__add-title">В избранное</div></a></div>
-                    </div>
-                  </div>
-                  <div class="product__row">
-                    <div class="row">
-                      <div class="product__left2">
-                        <div class="product__list">
-                          <div class="product__item">
-                            <div class="product__item-name">Гарантия:</div>
-                            <div class="product__item-val">36 мес.</div>
-                          </div>
-                          <div class="product__item">
-                            <div class="product__item-name">Страна-производитель:</div>
-                            <div class="product__item-val">Китай</div>
-                          </div>
-                          <div class="product__item">
-                            <div class="product__item-name">Цвет:</div>
-                            <div class="product__item-val">Серый, черный</div>
-                          </div>
-                          <div class="product__item">
-                            <div class="product__item-name">Графический процессор:</div>
-                            <div class="product__item-val">Radeon RX 570</div>
-                          </div>
-                          <div class="product__item">
-                            <div class="product__item-name">Объем видеопамяти:</div>
-                            <div class="product__item-val">8 Гб</div>
-                          </div>
-                          <div class="product__item">
-                            <div class="product__item-name">Тип памяти:</div>
-                            <div class="product__item-val">GDDR5</div>
-                          </div>
-                          <div class="product__item">
-                            <div class="product__item-name">Интерфейс подключения:</div>
-                            <div class="product__item-val">PCI-E</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="product__right2">
-                        <div class="product__block">
-                          <div class="product__price">
-                            <div class="product__price-title">Стоимость<br>товара:</div>
-                            <div class="product__price-price">
-                              <div class="product__price-val">254 040</div>
-                              <div class="product__price-cur">руб.</div>
-                            </div>
-                          </div>
-                          <div class="product__block-bottom">
-                            <div class="product__selects">
-                              <select class="select product__select">
-                                <option value="">Выберите цвет</option>
-                                <option value="Красный">Красный</option>
-                                <option value="Черный">Черный</option>
-                              </select>
-                              <div class="product__count">
-                                <div class="cnt">
-                                  <button class="cnt__btn cnt__minus" type="button">
-                                    <svg class="cnt__svg">
-                                      <use xlink:href="/images/icons/sprite.svg#minus"></use>
-                                    </svg>
-                                  </button>
-                                  <input class="cnt__input" type="text" name="count" value="1" readonly>
-                                  <button class="cnt__btn cnt__plus" type="button">
-                                    <svg class="cnt__svg">
-                                      <use xlink:href="/images/icons/sprite.svg#plus"></use>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="product__buys">
-                              <button class="btn btn_w product__one jsItemOne" type="button">Купить в 1 клик</button>
-                              <button class="btn btn_r product__buy jsItemBuy" type="button">Купить товар</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
               </div>
-            </div>
+            </form>
           </section>
-          <section class="product__bottom">
+          <div class="order__reccom">
             <div class="container">
-              <div class="product__sws">
-                <button class="active product__sw" type="button" data-id="1">Описание товара</button>
-                <button class="product__sw" type="button" data-id="2">Отзывы о  товаре</button>
-                <button class="product__sw" type="button" data-id="3">Коментарии</button>
-                <button class="product__sw" type="button" data-id="4">Скачать драйвера</button>
-                <button class="product__sw" type="button" data-id="5">Видео и фото</button>
-              </div>
-              <div class="product__tabs">
-                <div class="active product__tab" data-id="1">
-                  <div class="product__content">
-                    <div class="content">
-                      <h4>Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb</h4>
-                      <p>Как принято считать, некоторые особенности внутренней политики объединены в целые кластеры себе подобных. Принимая во внимание показатели успешности, глубокий уровень погружения требует от нас анализа переосмысления внешнеэкономических политик. Ясность нашей позиции очевидна: глубокий уровень погружения выявляет срочную потребность новых принципов формирования материально-технической и кадровой базы. Таким образом, понимание сути ресурсосберегающих технологий прекрасно подходит для реализации модели развития.</p>
-                      <p>Таким образом, семантический разбор внешних противодействий играет важную роль в формировании инновационных методов управления процессами. Господа, синтетическое тестирование требует определения и уточнения новых принципов формирования материально-технической и кадровой базы.</p>
-                    </div>
-                  </div>
-                  <div class="product__chars">
-                    <div class="chars">
-                      <div class="chars__title">Характеристики</div>
-                      <div class="row chars__cols">
-                        <div class="chars__col">
-                          <div class="char">
-                            <div class="char__name">Модель</div>
-                            <div class="char__val">Sapphire AMD Radeon RX 570 PULSE</div>
-                          </div>
-                          <div class="char">
-                            <div class="char__name">Год релиза</div>
-                            <div class="char__val">2017</div>
-                          </div>
-                          <div class="char">
-                            <div class="char__name">Основной цвет</div>
-                            <div class="char__val">Черный</div>
-                          </div>
-                          <div class="char">
-                            <div class="char__name">Подсветка видеокарты</div>
-                            <div class="char__val">Нет</div>
-                          </div>
-                        </div>
-                        <div class="chars__col">
-                          <div class="char">
-                            <div class="char__name">Графический процессор</div>
-                            <div class="char__val">Radeon RX 570</div>
-                          </div>
-                          <div class="char">
-                            <div class="char__name">Поддержка стандартов</div>
-                            <div class="char__val">OpenGL 4.5, Vulkan 1.0, OpenCL 2.0, DirectX 12</div>
-                          </div>
-                          <div class="char">
-                            <div class="char__name">Количество видеочипов</div>
-                            <div class="char__val">1</div>
-                          </div>
-                          <div class="char">
-                            <div class="char__name">Технологический процесс</div>
-                            <div class="char__val">14 нм</div>
-                          </div>
-                        </div>
-                        <div class="chars__col">
-                          <div class="char">
-                            <div class="char__name">Штатная частота работы видеочипа</div>
-                            <div class="char__val">1168 МГц</div>
-                          </div>
-                          <div class="char">
-                            <div class="char__name">Число текстурных блоков</div>
-                            <div class="char__val">128</div>
-                          </div>
-                          <div class="char">
-                            <div class="char__name">Число блоков растеризации</div>
-                            <div class="char__val">32</div>
-                          </div>
-                          <div class="char">
-                            <div class="char__name">Версия шейдеров</div>
-                            <div class="char__val">5.0</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="product__tab" data-id="2">
-                  <div class="product__tab-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, quisquam.</div>
-                </div>
-                <div class="product__tab" data-id="3">
-                  <div class="product__tab-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus dolore error illo in iure iusto libero, natus quibusdam ullam.</div>
-                </div>
-                <div class="product__tab" data-id="4">
-                  <div class="product__tab-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dignissimos maiores nisi officia quidem ratione voluptas voluptatibus. Ad assumenda atque corporis, dolorum neque odit perspiciatis placeat provident quae quasi quia veniam voluptate. A accusamus architecto consequatur dolorum itaque natus repudiandae ullam ut! Aut esse natus optio quos sed tempore vero!</div>
-                </div>
-                <div class="product__tab" data-id="5">
-                  <div class="product__tab-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eligendi error in magnam repellat. Atque eaque ex ipsam nesciunt nobis praesentium reiciendis. Adipisci consequatur corporis doloremque dolores eos fuga illum laboriosam nostrum odio perferendis provident reiciendis repellat repudiandae, rerum similique.</div>
-                </div>
-              </div>
-              <div class="product__acco">
-                <div class="pacco">
-                  <div class="pacco__item">
-                    <button class="pacco__btn" type="button"><span class="pacco__btn-title">Описание товара</span></button>
-                    <div class="pacco__wrapper">
-                      <div class="product__content">
-                        <div class="content">
-                          <h4>Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb</h4>
-                          <p>Как принято считать, некоторые особенности внутренней политики объединены в целые кластеры себе подобных. Принимая во внимание показатели успешности, глубокий уровень погружения требует от нас анализа переосмысления внешнеэкономических политик. Ясность нашей позиции очевидна: глубокий уровень погружения выявляет срочную потребность новых принципов формирования материально-технической и кадровой базы. Таким образом, понимание сути ресурсосберегающих технологий прекрасно подходит для реализации модели развития.</p>
-                          <p>Таким образом, семантический разбор внешних противодействий играет важную роль в формировании инновационных методов управления процессами. Господа, синтетическое тестирование требует определения и уточнения новых принципов формирования материально-технической и кадровой базы.</p>
-                        </div>
-                      </div>
-                      <div class="product__chars">
-                        <div class="chars">
-                          <div class="chars__title">Характеристики</div>
-                          <div class="row chars__cols">
-                            <div class="chars__col">
-                              <div class="char">
-                                <div class="char__name">Модель</div>
-                                <div class="char__val">Sapphire AMD Radeon RX 570 PULSE</div>
-                              </div>
-                              <div class="char">
-                                <div class="char__name">Год релиза</div>
-                                <div class="char__val">2017</div>
-                              </div>
-                              <div class="char">
-                                <div class="char__name">Основной цвет</div>
-                                <div class="char__val">Черный</div>
-                              </div>
-                              <div class="char">
-                                <div class="char__name">Подсветка видеокарты</div>
-                                <div class="char__val">Нет</div>
-                              </div>
-                            </div>
-                            <div class="chars__col">
-                              <div class="char">
-                                <div class="char__name">Графический процессор</div>
-                                <div class="char__val">Radeon RX 570</div>
-                              </div>
-                              <div class="char">
-                                <div class="char__name">Поддержка стандартов</div>
-                                <div class="char__val">OpenGL 4.5, Vulkan 1.0, OpenCL 2.0, DirectX 12</div>
-                              </div>
-                              <div class="char">
-                                <div class="char__name">Количество видеочипов</div>
-                                <div class="char__val">1</div>
-                              </div>
-                              <div class="char">
-                                <div class="char__name">Технологический процесс</div>
-                                <div class="char__val">14 нм</div>
-                              </div>
-                            </div>
-                            <div class="chars__col">
-                              <div class="char">
-                                <div class="char__name">Штатная частота работы видеочипа</div>
-                                <div class="char__val">1168 МГц</div>
-                              </div>
-                              <div class="char">
-                                <div class="char__name">Число текстурных блоков</div>
-                                <div class="char__val">128</div>
-                              </div>
-                              <div class="char">
-                                <div class="char__name">Число блоков растеризации</div>
-                                <div class="char__val">32</div>
-                              </div>
-                              <div class="char">
-                                <div class="char__name">Версия шейдеров</div>
-                                <div class="char__val">5.0</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="pacco__item">
-                    <button class="pacco__btn" type="button"><span class="pacco__btn-title">Отзывы о товаре</span></button>
-                    <div class="pacco__wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, quisquam.</div>
-                  </div>
-                  <div class="pacco__item">
-                    <button class="pacco__btn" type="button"><span class="pacco__btn-title">Коментарии</span></button>
-                    <div class="pacco__wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus dolore error illo in iure iusto libero, natus quibusdam ullam.</div>
-                  </div>
-                  <div class="pacco__item">
-                    <button class="pacco__btn" type="button"><span class="pacco__btn-title">Скачать драйвера</span></button>
-                    <div class="pacco__wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dignissimos maiores nisi officia quidem ratione voluptas voluptatibus. Ad assumenda atque corporis, dolorum neque odit perspiciatis placeat provident quae quasi quia veniam voluptate. A accusamus architecto consequatur dolorum itaque natus repudiandae ullam ut! Aut esse natus optio quos sed tempore vero!</div>
-                  </div>
-                  <div class="pacco__item">
-                    <button class="pacco__btn" type="button"><span class="pacco__btn-title">Видео и фото</span></button>
-                    <div class="pacco__wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eligendi error in magnam repellat. Atque eaque ex ipsam nesciunt nobis praesentium reiciendis. Adipisci consequatur corporis doloremque dolores eos fuga illum laboriosam nostrum odio perferendis provident reiciendis repellat repudiandae, rerum similique.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <div class="container"><a class="product__banner" href="product.html"><img class="product__banner-img" src="images/content/products/product-banner.jpg" alt="lorem"><img class="product__banner-img product__banner-img_t" src="images/content/products/banner.jpg" alt="lorem"></a></div>
-          <div class="product__same">
-            <div class="container">
-              <div class="psame slider">
+              <div class="oreccom slider">
                 <div class="slider__top">
-                  <div class="slider__title title">Похожие товары</div>
+                  <div class="slider__title title">Рекомендуемые товары</div>
                   <div class="slider__nav">
                     <button class="slider__prev arrow" type="button">
                       <svg class="arrow__svg">
@@ -1311,53 +1249,6 @@
               </div>
             </div>
           </div>
-          <section class="product__brands">
-            <div class="container">
-              <div class="ibrands slider">
-                <div class="slider__top">
-                                <div class="slider__title title">Наши бренды</div>
-                                <div class="slider__nav">
-                                  <button class="slider__prev arrow" type="button">
-                                                  <svg class="arrow__svg">
-                                                    <use xlink:href="/images/icons/sprite.svg#arr-l"></use>
-                                                  </svg>
-                                  </button>
-                                  <button class="slider__next arrow" type="button">
-                                                  <svg class="arrow__svg">
-                                                    <use xlink:href="/images/icons/sprite.svg#arr-r"></use>
-                                                  </svg>
-                                  </button>
-                                </div>
-                </div>
-                <div class="slider__bottom">
-                  <div class="swiper-container slider__container">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide slider__slide"><a class="ibrand" href="brands.html">
-                          <div class="ibrand__img"><img src="images/content/index/brands/1.png" alt="lorem"></div></a></div>
-                      <div class="swiper-slide slider__slide"><a class="ibrand" href="brands.html">
-                          <div class="ibrand__img"><img src="images/content/index/brands/2.png" alt="lorem"></div></a></div>
-                      <div class="swiper-slide slider__slide"><a class="ibrand" href="brands.html">
-                          <div class="ibrand__img"><img src="images/content/index/brands/3.png" alt="lorem"></div></a></div>
-                      <div class="swiper-slide slider__slide"><a class="ibrand" href="brands.html">
-                          <div class="ibrand__img"><img src="images/content/index/brands/4.png" alt="lorem"></div></a></div>
-                      <div class="swiper-slide slider__slide"><a class="ibrand" href="brands.html">
-                          <div class="ibrand__img"><img src="images/content/index/brands/5.png" alt="lorem"></div></a></div>
-                      <div class="swiper-slide slider__slide"><a class="ibrand" href="brands.html">
-                          <div class="ibrand__img"><img src="images/content/index/brands/6.png" alt="lorem"></div></a></div>
-                      <div class="swiper-slide slider__slide"><a class="ibrand" href="brands.html">
-                          <div class="ibrand__img"><img src="images/content/index/brands/7.png" alt="lorem"></div></a></div>
-                      <div class="swiper-slide slider__slide"><a class="ibrand" href="brands.html">
-                          <div class="ibrand__img"><img src="images/content/index/brands/8.png" alt="lorem"></div></a></div>
-                      <div class="swiper-slide slider__slide"><a class="ibrand" href="brands.html">
-                          <div class="ibrand__img"><img src="images/content/index/brands/9.png" alt="lorem"></div></a></div>
-                      <div class="swiper-slide slider__slide"><a class="ibrand" href="brands.html">
-                          <div class="ibrand__img"><img src="images/content/index/brands/10.png" alt="lorem"></div></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
         </main>
       </div>
       <footer class="footer">

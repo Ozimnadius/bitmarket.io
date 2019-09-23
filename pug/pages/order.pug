@@ -1,0 +1,192 @@
+extends ../main
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main.order
+        //- breadcrumbs
+        .container
+            .bread
+                a(href='/').bread__item Главная
+                +icon('angle-r','bread__seporator')
+                span.bread__item.bread__item_active Оформление заказа
+
+        //- top
+        section.order__top
+            form.order__form
+                .container
+                    //- title
+                    .order__title Оформление заказа
+                    .row
+                        //- left
+                        .right.order__left
+                            //- list
+                            .order__list
+                                each i in [1,2,3]
+                                    div(data-id=i data-price='12290').order__item.oitem
+                                        //- img
+                                        .oitem__img
+                                            +image('images/content/products/img.jpg','lorem','oitem__pic')
+                                        //- wrap
+                                        .oitem__wrap
+                                            //- left
+                                            .oitem__left
+                                                a(href='product.html').oitem__title Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb
+
+                                            //- right
+                                            .oitem__right
+                                                //- count
+                                                .oitem__count
+                                                    .cnt.order__cnt
+                                                        button(type='button').cnt__btn.cnt__minus.order__cnt-btn
+                                                            +icon('minus','cnt__svg')
+                                                        input(type='text' name='count1' value=1 readonly=true).cnt__input
+                                                        button(type='button').cnt__btn.cnt__plus.order__cnt-btn
+                                                            +icon('plus','cnt__svg')
+
+                                                //- price
+                                                .oitem__price
+                                                    .oitem__price-title
+                                                        | Стоимость
+                                                        br
+                                                        | товара:
+                                                    .oitem__price-val 12.290
+                                                    .oitem__price-cur руб.
+
+                                                //- adds
+                                                .oitem__adds
+                                                    button.oitem__add
+                                                        +icon('heart', 'oitem__add-svg')
+                                                    button.oitem__add
+                                                        +icon('recycle', 'oitem__add-svg')
+
+                                                //- delete
+                                                .oitem__remove
+                                                    button(type='button').btn.btn_r.oitem__delete Удалить
+
+
+
+                            //- controls
+                            .order__controls
+                                //- add
+                                button(type='button').order__add
+                                    span.order__add-plus
+                                        +icon('plus2', 'order__add-svg')
+                                    span.order__add-title Добавить товар
+                                //- print
+                                button(type='button').order__print
+                                    +image('images/icons/printer.png','lorem','order__print-img')
+                                    span.order__print-title Распечатать заказ
+
+                                //- info
+                                .order__info.oinfo
+                                    .oinfo__left
+                                        .oinfo__name Кол-во:
+                                        .oinfo__val
+                                            span.oinfo__val-val 3&nbsp;
+                                            span.oinfo__val-type шт.
+                                    .oinfo__right
+                                        .oinfo__name Стоимость:
+                                        .oinfo__val
+                                            span.oinfo__val-val 36 870&nbsp;
+                                            span.oinfo__val-type руб.
+
+                            //- data
+                            .order__data
+                                .odata
+                                    .odata__row
+                                        //- title
+                                        .odata__title
+                                            .odata__title-text Данные юр.лица
+                                        //- fields
+                                        .odata__fields.row
+                                            .odata__field.odata__field_6
+                                                input(type='text' name='name' placeholder='Название компании / ФИО для ИП').input
+                                            .odata__field.odata__field_3
+                                                input(type='text' name='inn' placeholder='ИНН').input
+                                            .odata__field.odata__field_3
+                                                label.file
+                                                    input(type='file' name='file').file__input
+                                                    span.file__fake
+                                                        span.file__btn
+                                                            +image('images/icons/clip.png', 'lorem','file__img')
+                                                        span.file__title Прикрепить реквизиты ИП или компании.
+
+                                    .odata__row
+                                        .odata__title
+                                            .odata__title-text Доставка
+                                        .odata__fields.row
+                                            .odata__field.odata__field_6
+                                                input(type='text' name='delivery' placeholder='Выберите вариант доставки').input
+                                            .odata__field.odata__field_2
+                                                input(type='text' name='city' placeholder='Город').input
+                                            .odata__field.odata__field_2
+                                                input(type='text' name='street' placeholder='Улица').input
+                                            .odata__field.odata__field_1
+                                                input(type='text' name='house' placeholder='Дом').input
+                                            .odata__field.odata__field_1
+                                                input(type='text' name='room' placeholder='Кв.').input
+                                    .odata__row
+                                        .odata__title
+                                            .odata__title-text.title Оплата
+                                            a(href='about.html').odata__title-link.link Подробнее
+                                        .odata__types
+                                            .row
+                                                each i in [1,2,3,4,5,6]
+                                                    label.odata__type
+                                                        input(type='radio' name='types' value=i).odata__type-input
+                                                        span.odata__type-fake
+                                                            +image('images/icons/mastercard.png','lorem','odata__type-img')
+                                                            span.odata__type-title Банковской картой
+
+
+                            //- buttons
+                            .order__buttons
+                                a(href='catalog.html' data-text='Вернуться к выбору товаров').btn.btn_g.order__link.order__btn Продолжить выбор
+                                a(href='/' data-text='Полноценное оформление товаров').btn.btn_r.order__buy.order__btn Оформить заказ
+                                button(type='button' data-text='Вам потребуется указать только номер телефона и имя').btn.btn_g.order__one.order__btn Быстрый заказ
+                        //- right
+                        .left.order__right
+                            //- total
+                            .order__total
+                                .ototal
+                                    //- title
+                                    .ototal__title Итого по заказу
+                                    //- list
+                                    .ototal__list
+                                        each i in ototalList
+                                            div(class=i.dopClass).ototal__item
+                                                .ototal__item-name= i.name
+                                                .ototal__item-val= i.val
+
+
+
+                                    //- bottom
+                                    .ototal__bottom
+                                        .ototal__list.ototal__list_t
+                                            each i in ototalList
+                                                .ototal__item
+                                                    .ototal__item-name= i.name
+                                                    .ototal__item-val= i.val
+
+
+
+
+                                        .ototal__price
+                                            .ototal__sub Итого к оплате:
+                                            .ototal__price-wrap
+                                                span.ototal__price-val 37 220&nbsp;
+                                                span.ototal__price-cur руб.
+                                        a(href='/').btn.btn_r.ototal__btn Подтвердить заказ
+                                        .ototal__desc Нажимая на кнопку, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с Условиями, а так же с Условиями продажи.
+        //- reccom
+        .order__reccom
+            .container
+                +slider('Рекомендуемые товары','oreccom','item_s')
+
+
+
+
+
+
