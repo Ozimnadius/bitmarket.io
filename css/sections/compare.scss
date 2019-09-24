@@ -1,0 +1,258 @@
+.compare {
+
+  &__main {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__switch {
+    display: flex;
+    align-items: center;
+
+    &-btn {
+      width: 44px;
+      height: 24px;
+      border-radius: 12px;
+      border: 1px solid $white;
+      background-color: $bg;
+      margin-right: 30px;
+      position: relative;
+      cursor: pointer;
+
+      &.active {
+        &:after {
+          left: calc(100% - 21px);
+        }
+
+        + .compare__switch-titles .compare__switch-title {
+          &:first-child {
+            display: none;
+          }
+
+          &:last-child {
+            display: flex;
+          }
+        }
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: $text;
+        position: absolute;
+        top: 2px;
+        left: 3px;
+        @include tr3s;
+      }
+    }
+
+    &-title {
+      width: 231px;
+      height: 30px;
+      color: rgba($text, .7);
+      font-size: 12px;
+      font-weight: 500;
+      line-height: lh(12, 18);
+      letter-spacing: 0.72px;
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    @include col;
+    @include size(15/5);
+
+    &_null {
+      border-radius: 8px;
+      border: 1px dashed $white;
+      background-color: $bg;
+    }
+
+    &-wrap {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-title {
+      color: rgba($text, .5);
+      font-size: 12px;
+      line-height: lh(12, 18);
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px dashed $white;
+    background-color: $bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 25px;
+
+    &-svg {
+      width: 16px;
+      height: 16px;
+      stroke: $white7;
+      fill: transparent;
+    }
+  }
+
+  &__chars {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+
+.cchars {
+  border-radius: 8px;
+  border: 1px solid $white;
+  background-color: $bg;
+  overflow: hidden;
+  margin-bottom: 40px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  &__top {
+    background-color: $white2;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    color: $black;
+    font-size: 15px;
+    font-weight: 800;
+  }
+
+  &__btn {
+    position: relative;
+    width: 16px;
+    height: 16px;
+
+    &.open {
+      &:before{
+        transform: rotate(-90deg);
+      }
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      height: 4px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin-top: -2px;
+      border-radius: 2px;
+      background-color: $text;
+      @include tr3s;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 4px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+      border-radius: 2px;
+      background-color: $text;
+      @include tr3s;
+    }
+  }
+
+  &__bottom {
+    height: 0;
+    @include tr3s;
+  }
+
+  &__wrap {
+    padding: 30px;
+    border-top: 1px solid $white;
+  }
+}
+
+.cchar {
+  margin-bottom: 20px;
+
+  &.same{
+    .cchar__item{
+      background-color: $bg;
+    }
+  }
+
+  &.disabled {
+    display: none;
+  }
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  &__name {
+    color: $black;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  &__row {
+
+  }
+
+  &__item {
+    @include col;
+    width: 240px;
+    min-height: 68px;
+    border-radius: 8px;
+    border: 1px solid $white;
+    background-color: $white2;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+
+    color: $black;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: lh(12,18);
+  }
+
+}
+
+
+

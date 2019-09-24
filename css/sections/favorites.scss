@@ -1,0 +1,528 @@
+.fav {
+
+  &__row {
+    margin-bottom: 60px;
+    @include lg-block{
+      margin-bottom: 50px;
+    }
+    @include sm-block{
+      margin-bottom: 10px;
+    }
+  }
+
+  &__left {
+
+  }
+
+  &__blog {
+    .blog__item{
+      @include lg-block{
+        &:nth-child(3){
+          display: none;
+        }
+      }
+    }
+
+  }
+
+  &__right {
+    @include lg-block{
+      margin-bottom: 50px;
+    }
+    @include sm-block{
+      margin-bottom: 40px;
+    }
+  }
+
+  &__banner {
+    margin-bottom: 40px;
+    @include sm-block{
+      margin-bottom: 50px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__same {
+    border-top: 1px solid $white;
+    background-color: $white2;
+    padding: 50px 0;
+    @include lg-block {
+      padding: 40px 0;
+    }
+    @include sm-block {
+      padding: 30px 0;
+      margin-bottom: 40px;
+      border-bottom: 1px solid $white;
+    }
+  }
+}
+
+.flist {
+  border-radius: 8px;
+  border: 1px solid $white;
+  background-color: $bg;
+  overflow: hidden;
+
+  &__top {
+    border-bottom: 1px solid $white;
+    background-color: $white2;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @include lg-block {
+      padding: 25px 20px;
+    }
+    @include sm-block{
+      background-color: transparent;
+      border-bottom: none;
+      padding: 0;
+    }
+  }
+
+  &__left {
+    width: 728px;
+    padding-right: 90px;
+    @include lg-block {
+      width: 320px;
+      padding-right: 40px;
+    }
+    @include sm-block{
+      width: 100%;
+      padding: 15px 20px;
+      background-color: $white2;
+      border-bottom: 1px solid $white;
+    }
+
+    &-top {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 11px;
+      @include lg-block{
+        margin-bottom: 5px;
+      }
+      @include sm-block{
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-right: 20px;
+    line-height: 1;
+    @include sm-block{
+      font-size: 15px;
+      margin-right: auto;
+    }
+  }
+
+  &__date {
+    color: $red;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    @include sm-block{
+      font-size: 10px;
+    }
+  }
+
+  &__desc {
+    color: rgba($text, .7);
+    font-size: 10px;
+    font-style: italic;
+    line-height: lh(10, 15);
+  }
+
+  &__right {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include sm-block{
+      padding: 20px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__price {
+    &-val {
+      font-size: 24px;
+      font-weight: 800;
+      @include sm-block{
+        font-size: 18px;
+      }
+    }
+
+    &-cur {
+      font-size: 12px;
+      font-weight: 800;
+      @include sm-block{
+        font-size: 10px;
+      }
+    }
+  }
+
+  &__all {
+    border-radius: 6px;
+    background-color: $red;
+    display: flex;
+    overflow: hidden;
+
+    &-left {
+      width: 120px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      @include sm-block{
+        width: 112px;
+      }
+    }
+
+    &-title {
+      color: $bg;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    &-right {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba($bg, .2);
+      @include sm-block{
+        display: none;
+      }
+    }
+
+
+    &-svg {
+      width: 23px;
+      height: 25px;
+      fill: $bg;
+    }
+  }
+
+  &__bottom {
+    padding: 30px;
+    @include lg-block{
+      padding: 20px;
+    }
+  }
+
+}
+
+.fitem {
+  border-radius: 8px;
+  border: 1px solid $white;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 25px 20px;
+  position: relative;
+
+  @include sm-block{
+    padding: 20px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__left {
+    width: 275px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include lg-block {
+      width: 160px;
+    }
+    @include sm-block{
+      width: 100%;
+      padding: 30px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__img {
+    width: 104px;
+    @include lg-block {
+      width: 130px;
+    }
+    @include sm-block{
+      width: 114px;
+    }
+  }
+
+  &__right {
+    width: calc(100% - 275px);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    @include lg-block {
+      width: calc(100% - 160px);
+    }
+    @include sm-block{
+      width: 100%;
+    }
+
+    &-right {
+      width: 480px;
+      @include lg-block {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+      @include sm-block{
+        margin-bottom: 17px;
+      }
+    }
+
+    &-left {
+      width: 230px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 20px;
+      @include lg-block {
+        width: 100%;
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__delete {
+    color: $red;
+    font-size: 10px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    @include lg-block {
+      top: 30px;
+    }
+    @include sm-block{
+      top: 20px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    @include lg-block{
+        justify-content: flex-start;
+    }
+  }
+
+  &__cat {
+    color: $black;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include lg-block {
+      margin-right: 35px;
+    }
+    @include sm-block{
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    @include sm-block{
+      order: 1;
+    }
+
+    &-count {
+      opacity: 0.2;
+      color: rgba($text, .2);
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  &__stars {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__star {
+    width: 14px;
+    height: 13px;
+    fill: rgba($light-grey2, .3);
+    margin-right: 3px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      fill: $yellow;
+    }
+  }
+
+  &__title {
+    color: $blue;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: lh(15, 21);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    @include lg-block{
+      margin-bottom: 10px;
+    }
+    @include sm-block{
+      margin-bottom: 20px;
+      font-size: 12px;
+      margin-top: 0;
+    }
+  }
+
+  &__desc {
+    font-size: 12px;
+    line-height: lh(12, 18);
+    padding-right: 60px;
+    width: 100%;
+    @include sm-block{
+      display: none;
+    }
+  }
+
+  &__pricing {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+    @include lg-block {
+      width: 50%;
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__price {
+    &-val {
+      font-size: 21px;
+      font-weight: 700;
+    }
+
+    &-cur {
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  &__old {
+    position: relative;
+    color: rgba($text, .5);
+    @include lg-block {
+      display: none;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: -2px;
+      right: -2px;
+      height: 1px;
+      background: $light-grey;
+      top: 50%;
+    }
+
+    &-val {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    &-cur {
+      font-size: 10px;
+      font-weight: 600;
+    }
+  }
+
+  &__compare {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    border: 1px solid $white;
+    background-color: $bg;
+    @include tr3s;
+
+    &-svg {
+      width: 21px;
+      height: 21px;
+      fill: $text;
+    }
+  }
+
+  &__buy {
+    width: 160px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid $white;
+    background-color: $bg;
+    display: flex;
+    @include sm-block{
+      width: 100%;
+      margin-top: 10px;
+    }
+
+
+    &-left {
+      height: 50px;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-title {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    &-right {
+      height: 50px;
+      width: 50px;
+      border-radius: 0 6px 6px 0;
+      background-color: $red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-svg {
+      width: 23px;
+      height: 25px;
+      fill: $bg;
+    }
+
+
+  }
+
+}

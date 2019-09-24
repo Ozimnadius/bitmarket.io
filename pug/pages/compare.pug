@@ -1,0 +1,82 @@
+extends ../main
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main.compare
+        //- breadcrumbs
+        .container
+            .bread
+                a(href='/').bread__item Главная
+                +icon('angle-r','bread__seporator')
+                span.bread__item.bread__item_active Сравнение товаров
+        //- main
+        section.compare__main
+            .container
+                //- title
+                .compare__title.title Сравнение товаров
+                //- buttons
+                .compare__buttons
+                    //- switch
+                    .compare__switch
+                        .compare__switch-btn
+                        .compare__switch-titles
+                            .compare__switch-title Оставить только различающиеся параметры
+                            .compare__switch-title Показать все параметры
+                    //- clear
+                    button(type='button').compare__clear.btn.btn_g Очистить список
+                //- list
+                .compare__list
+                    .row
+                        each i in [1,2]
+                            .compare__item
+                                +items([1])
+                        .compare__item.compare__item_null
+                            .compare__item-wrap
+                                .compare__btn
+                                    +icon('plus2', 'compare__btn-svg')
+                                .compare__item-title
+                                    |Добавить еще товары из
+                                    br
+                                    |данной категории
+
+                //- chars
+                .compare__chars
+                    each i in compareList
+                        .cchars
+                            //- top
+                            .cchars__top
+                                .cchars__title= i.title
+                                button(type='button').cchars__btn
+                            //- bottom
+                            .cchars__bottom
+                                .cchars__wrap
+                                    each char in i.rows
+                                        div(class=char.dopClass).cchar
+                                            .cchar__name= char.name
+                                            .row.cchar__row
+                                                each item in char.list
+                                                    .cchar__item= item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

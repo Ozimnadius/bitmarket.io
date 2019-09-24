@@ -1,0 +1,195 @@
+extends ../main
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main.fav
+        //- breadcrumbs
+        .container
+            .bread
+                a(href='/').bread__item Главная
+                +icon('angle-r','bread__seporator')
+                span.bread__item.bread__item_active Отложенные товары
+
+        //- row
+        section.fav__row
+            .container
+                .row
+                    //- left
+                    .left.fav__left
+                        .fav__blog
+                            +blog([1, 2, 3])
+
+                    //- right
+                    .right.fav__right
+                        //- banner
+                        a(href='product.html').list__banner.fav__banner
+                            img(src='images/content/products/banner.jpg' alt='lorem').list__banner-img
+                        //- list
+                        .fav__list
+                            .flist
+                                .flist__top
+                                    //- left
+                                    .flist__left
+                                        //- top
+                                        .flist__left-top
+                                            .flist__title Список товаров
+                                            .flist__date от 10.08.2019
+                                        //- bottom
+                                        .flist__left-bottom
+                                            .flist__desc Товар будет удален 17.08.19, для того что бы сохранить список в личном кабинете, пройдите регистрацию или авторизацию.
+
+                                    //- center
+                                    .flist__right
+                                        //- price
+                                        .flist__price
+                                            span.flist__price-val 49.160
+                                            span.flist__price-cur &nbsp;руб.
+                                        //- all
+                                        button(type='button').flist__all
+                                            span.flist__all-left
+                                                span.flist__all-title Купить все
+                                            span.flist__all-right
+                                                +icon('cart', 'flist__all-svg')
+                                .flist__bottom
+                                    each i in [1,2,3,4]
+                                        div(data-id=i data-price='12290').fitem
+                                            //- right
+                                            .fitem__left
+                                                +image('images/content/products/img.jpg','lorem','fitem__img')
+
+                                            //- delete
+                                            button(type='button').fitem__delete Удалить
+                                            //- left
+                                            .fitem__right
+                                                //- right
+                                                .fitem__right-right
+                                                    .fitem__top
+                                                        .fitem__cat Видеокарты
+                                                        .fitem__rating
+                                                            .fitem__stars
+                                                                +icon('star','fitem__star active')
+                                                                +icon('star','fitem__star active')
+                                                                +icon('star','fitem__star active')
+                                                                +icon('star','fitem__star active')
+                                                                +icon('star','fitem__star')
+                                                            .fitem__rating-count (12)
+
+                                                        a(href='product.html').fitem__title Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb
+                                                        .fitem__desc [PCI-E 3.0, 8 ГБ GDDR5, 256 бит, 1168 МГц - 1284 МГц, HDMI (2 шт), DisplayPort (2 шт)]
+                                                //- left
+                                                .fitem__right-left
+                                                    //- pricing
+                                                    .fitem__pricing
+                                                        //- price
+                                                        .fitem__price
+                                                            span.fitem__price-val 12.290
+                                                            span.fitem__price-cur &nbsp;руб.
+                                                        //- old
+                                                        .fitem__old
+                                                            span.fitem__old-val 14.365
+                                                            span.fitem__old-cur &nbsp;руб.
+                                                    //- compare
+                                                    button(type='button').fitem__compare
+                                                        +icon('recycle', 'fitem__compare-svg')
+                                                    //- buy
+                                                    button(type='button').fitem__buy
+                                                        span.fitem__buy-left
+                                                            span.fitem__buy-title Купить
+                                                        span.fitem__buy-right
+                                                            +icon('cart', 'fitem__buy-svg')
+
+                        //- list
+                        .fav__list
+                            .flist
+                                .flist__top
+                                    //- left
+                                    .flist__left
+                                        //- top
+                                        .flist__left-top
+                                            .flist__title Список товаров
+                                            .flist__date от от 15.08.2019
+                                        //- bottom
+                                        .flist__left-bottom
+                                            .flist__desc Товар будет удален 17.08.19, для того что бы сохранить список в личном кабинете, пройдите регистрацию или авторизацию.
+
+                                    //- center
+                                    .flist__right
+                                        //- price
+                                        .flist__price
+                                            span.flist__price-val 49.160
+                                            span.flist__price-cur &nbsp;руб.
+                                        //- all
+                                        button(type='button').flist__all
+                                            span.flist__all-left
+                                                span.flist__all-title Купить все
+                                            span.flist__all-right
+                                                +icon('cart', 'flist__all-svg')
+                                .flist__bottom
+                                    each i in [1,2]
+                                        div(data-id=i data-price='12290').fitem
+                                            //- right
+                                            .fitem__left
+                                                +image('images/content/products/img.jpg','lorem','fitem__img')
+                                            //- delete
+                                            button(type='button').fitem__delete Удалить
+                                            //- left
+                                            .fitem__right
+                                                //- right
+                                                .fitem__right-right
+                                                    .fitem__top
+                                                        .fitem__cat Видеокарты
+                                                        .fitem__rating
+                                                            .fitem__stars
+                                                                +icon('star','fitem__star active')
+                                                                +icon('star','fitem__star active')
+                                                                +icon('star','fitem__star active')
+                                                                +icon('star','fitem__star active')
+                                                                +icon('star','fitem__star')
+                                                            .fitem__rating-count (12)
+
+                                                        a(href='product.html').fitem__title Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb
+                                                        .fitem__desc [PCI-E 3.0, 8 ГБ GDDR5, 256 бит, 1168 МГц - 1284 МГц, HDMI (2 шт), DisplayPort (2 шт)]
+                                                //- left
+                                                .fitem__right-left
+                                                    //- pricing
+                                                    .fitem__pricing
+                                                        //- price
+                                                        .fitem__price
+                                                            span.fitem__price-val 12.290
+                                                            span.fitem__price-cur &nbsp;руб.
+                                                        //- old
+                                                        .fitem__old
+                                                            span.fitem__old-val 14.365
+                                                            span.fitem__old-cur &nbsp;руб.
+                                                    //- compare
+                                                    button(type='button').fitem__compare
+                                                        +icon('recycle', 'fitem__compare-svg')
+                                                    //- buy
+                                                    button(type='button').fitem__buy
+                                                        span.fitem__buy-left
+                                                            span.fitem__buy-title Купить
+                                                        span.fitem__buy-right
+                                                            +icon('cart', 'fitem__buy-svg')
+        //- reccom
+        .fav__same
+            .container
+                +slider('Ранее вы смотрели','psame','item_s')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-//index.js
+//filters.js
 $(function () {
     $('.list__form').on('submit', function (e) {
         e.preventDefault();

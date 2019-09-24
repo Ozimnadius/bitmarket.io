@@ -58,6 +58,11 @@ function Switches(prop) {
     }
 }
 
+function imageResize(src) {
+    $('img').not('.logo__img').attr('src', src);
+}
+// imageResize('https://loremflickr.com/320/440');
+
 function getNumber(str) {
     return parseInt(str.replace(/\s/g, ''));
 }
@@ -201,3 +206,4 @@ $('.file__input').on('change', function (e) {
     text.text(file);
 
 });
+

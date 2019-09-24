@@ -1,4 +1,4 @@
-//index.js
+//product.js
 $(function () {
     let sliderProduct = new Swiper ('.product__container', {
         slidesPerView: 1,
