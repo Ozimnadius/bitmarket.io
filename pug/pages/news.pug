@@ -1,0 +1,70 @@
+extends ../main
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main.news
+        //- breadcrumbs
+        .container
+            .bread
+                a(href='/').bread__item Главная
+                +icon('angle-r','bread__seporator')
+                span.bread__item.bread__item_active Новости
+        //- row
+        section.news__row
+            .container
+                form.news__form
+                    //- search
+                    .news__search.news__search_t
+                        .nsearch
+                            .nsearch__title Поиск новостей
+                            .nsearch__field
+                                input(type='search' name='search' placeholder='Введите запрос').form__input.nsearch__input
+                                button(type='submit').nsearch__submit
+                                    +icon('loop','nsearch__svg')
+                    .row
+                        //- left
+                        .left.news__left
+                            //- search
+                            .news__search
+                                .nsearch
+                                    .nsearch__title Поиск новостей
+                                    .nsearch__field
+                                        input(type='search' name='search' placeholder='Введите запрос').form__input.nsearch__input
+                                        button(type='submit').nsearch__submit
+                                            +icon('loop','nsearch__svg')
+                            //- blog
+                            .news__blog.list__blog.list__blog_t
+                                +blog([1, 2])
+                            //- reviews
+                            .news__reviews
+                                +revs()
+                            //- reviews
+                            .news__reviews.news__reviews_t
+                                +revs2('rev_2')
+
+                        //- right
+                        .right.news__right
+                            //- title
+                            .news__title Новости
+                            //- list
+                            .news__list
+                                .row
+                                    each i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+                                        .news__item
+                                            +new([1])
+                            //- pag
+                            .news__pag
+                                .pag
+                                    a(href='catalog.html').pag__prev.btn.btn_g Предыдущая страница
+                                    a(href='catalog.html').pag__item.btn.btn_g.active 1
+                                    a(href='catalog.html').pag__item.btn.btn_g 2
+                                    a(href='catalog.html').pag__item.btn.btn_g 3
+                                    a(href='catalog.html').pag__next.btn.btn_g Следующая страница
+
+
+
+
+
+

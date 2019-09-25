@@ -1,0 +1,257 @@
+.article {
+  padding-bottom: 60px;
+  @include lg-block{
+    padding-bottom: 50px;
+  }
+  @include sm-block{
+    padding-bottom: 40px;
+  }
+
+  &__left {
+    @include lg-block {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__right {
+    @include sm-block{
+      margin-bottom: 40px;
+    }
+  }
+
+  &__reviews {
+    @include lg-block {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__blog {
+    display: none;
+    @include lg-block {
+      display: block;
+      order: 1;
+    }
+  }
+
+  &__banner {
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 53px;
+    border-radius: 6px;
+    @include lg-block {
+      height: 234px;
+      margin-bottom: 30px;
+    }
+
+
+    &-img {
+      display: block;
+      width: 100%;
+      @include sm-block {
+        display: none;
+      }
+
+      &_m {
+        display: none;
+        @include sm-block {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 23px;
+    @include lg-block {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+    @include sm-block {
+      font-size: 24px;
+    }
+  }
+
+  &__content {
+    margin-bottom: 50px;
+    @include lg-block{
+      margin-bottom: 40px;
+    }
+    @include sm-block{
+      margin-bottom: 30px;
+    }
+
+    p {
+      @include sm-block {
+        font-size: 15px;
+      }
+
+    }
+
+    h3 {
+      font-size: 24px;
+      line-height: lh(18,30);
+      @include sm-block {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__middle {
+    height: 90px;
+    border-radius: 8px;
+    border: 1px solid $white;
+    background-color: $white2;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-bottom: 55px;
+    flex-wrap: wrap;
+    @include lg-block{
+      margin-bottom: 45px;
+    }
+    @include sm-block{
+      height: auto;
+      background-color: $bg;
+      margin-bottom: 35px;
+    }
+
+    &-title {
+      color: $black2;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: lh(15, 21);
+      display: none;
+      height: 90px;
+      flex-grow: 1;
+      border-bottom-right-radius: 8px;
+      border-bottom: 1px solid $white;
+      align-items: center;
+      justify-content: center;
+      background-color: $white2;
+
+      @include sm-block {
+        display: flex;
+      }
+    }
+  }
+
+  &__date {
+    width: 100px;
+    height: 90px;
+    background-color: $red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $bg;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    @include sm-block{
+      border-bottom-left-radius: 8px;
+    }
+  }
+
+  &__socials {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    @include sm-block{
+      width: 100%;
+      padding: 0 10px;
+    }
+  }
+
+  &__same {
+    @include lg-block {
+      display: none;
+    }
+
+    &_t {
+      display: none;
+      @include lg-block {
+        display: block;
+      }
+    }
+  }
+
+}
+
+.asocials {
+  display: flex;
+  align-items: center;
+  @include sm-block{
+    height: 62px;
+    width: 100%;
+  }
+
+  &__title {
+    color: $black2;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: lh(15, 21);
+    margin-right: 30px;
+    @include sm-block{
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    @include sm-block{
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+}
+
+.asocial {
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-right: 20px;
+  @include sm-block{
+    margin-right: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.asame {
+
+  &__title {
+    color: $black2;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 35px;
+    @include lg-block{
+      margin-bottom: 27px;
+    }
+    @include sm-block{
+      font-size: 18px;
+    }
+  }
+
+  &__item {
+    @include col;
+    @include size(15/4);
+    @include size-lg(15/2);
+    @include size-sm(15);
+    @include sm-block{
+      margin-bottom: 30px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}

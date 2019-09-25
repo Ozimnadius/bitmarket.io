@@ -1,7 +1,8 @@
 //compare.js
 $(function () {
-    $('.cchars__btn').on('click', function (e) {
-        let btn = $(this),
+    $('.cchars__top').on('click', function (e) {
+        let $this = $(this),
+            btn = $this.find('.cchars__btn'),
             chars = btn.closest('.cchars'),
             bottom = chars.find('.cchars__bottom'),
             height = bottom.find('.cchars__wrap').outerHeight();
@@ -41,5 +42,17 @@ $(function () {
 
 
 
+    });
+
+    var sliderCompare = new Swiper('.cslider__container', {
+        spaceBetween: 20,
+        pagination: {
+            el: '.cslider__pag',
+            type: 'fraction',
+        },
+        navigation: {
+            nextEl: '.cslider__next',
+            prevEl: '.cslider__prev',
+        },
     });
 });

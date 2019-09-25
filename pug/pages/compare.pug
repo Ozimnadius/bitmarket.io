@@ -25,7 +25,7 @@ block content
                             .compare__switch-title Оставить только различающиеся параметры
                             .compare__switch-title Показать все параметры
                     //- clear
-                    button(type='button').compare__clear.btn.btn_g Очистить список
+                    a(href='compare.html').compare__clear.btn.btn_g Очистить список
                 //- list
                 .compare__list
                     .row
@@ -58,6 +58,51 @@ block content
                                             .row.cchar__row
                                                 each item in char.list
                                                     .cchar__item= item
+                //- slider
+                .compare__slider
+                    .cslider
+                        //- nav
+                        .cslider__nav
+                            button(type='button').cslider__prev.cslider__btn
+                                +icon('arr-l','cslider__svg')
+                            .cslider__pag
+                            button(type='button').cslider__next.cslider__btn
+                                +icon('arr-r','cslider__svg')
+                        //- container
+                        .swiper-container.cslider__container
+                            .swiper-wrapper
+                                each slide in compareListTablet
+                                    .swiper-slide.cslide
+                                        //- item
+                                        .compare__item
+                                            +items([1])
+                                        //- chars
+                                        .cslide__chars
+                                            each i in slide
+                                                .cchars
+                                                    //- top
+                                                    .cchars__top
+                                                        .cchars__title= i.title
+                                                        button(type='button').cchars__btn
+                                                    //- bottom
+                                                    .cchars__bottom
+                                                        .cchars__wrap
+                                                            each char in i.rows
+                                                                div(class=char.dopClass).cchar
+                                                                    .cchar__name= char.name
+                                                                    .row.cchar__row
+                                                                        .cchar__item= char.val
+                                .swiper-slide.cslide
+                                    .compare__item.compare__item_null
+                                        .compare__item-wrap
+                                            .compare__btn
+                                                +icon('plus2', 'compare__btn-svg')
+                                            .compare__item-title
+                                                | Добавить еще товары из
+                                                br
+                                                | данной категории
+
+
 
 
 

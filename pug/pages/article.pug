@@ -1,0 +1,104 @@
+extends ../main
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main.article
+        //- breadcrumbs
+        .container
+            .bread
+                a(href='/').bread__item Главная
+                +icon('angle-r','bread__seporator')
+                a(href='news.html').bread__item Новости
+                +icon('angle-r','bread__seporator')
+                span.bread__item.bread__item_active Статья
+        //- row
+        section.list__row
+            .container
+                .row
+                    //- left
+                    .left.list__left.article__left
+                        //- blog
+                        .list__blog
+                            +blog([1, 2, 3])
+                        //- blog
+                        .article__blog
+                            +blog([1, 2])
+                        //- actions
+                        .list__actions
+                            +actions()
+                        //- reviews
+                        .news__reviews.article__reviews
+                            +revs()
+                        //- reviews
+                        .news__reviews.news__reviews_t.article__reviews
+                            +revs2('rev_2')
+                    //- right
+                    .right.list__right.article__right
+                        //- banner
+                        .article__banner
+                            +image('images/content/article/img.jpg','lorem','article__banner-img')
+                            +image('images/content/article/img-m.jpg','lorem','article__banner-img article__banner-img_m')
+                        //- title
+                        .article__title Скидка 500 рублей на новые WD Blue SN500 NVMe SSD
+                        //- content
+                        .article__content
+                            .content
+                                p С 17 июня по 17 июля 2019 года*, при заказе твердотельных накопителей WD Blue SN500 введите промокод SN500 и получите скидку 500 рублей.
+                                p Как купить SSD WD Blue SN500 со скидкой 500 рублей (только с 17 июня по 17 июля 2019 года):
+                                ol
+                                    li Добавьте в корзину акционный товар из списка ниже
+                                    li В корзине в поле ПРОМОКОД введите код SN500, нажмите кнопку "Применить"
+                                    li Продолжайте оформление заказа обычным способом
+                                h3 Новый уровень быстродействия NVMe™
+                                p Твердотельный накопитель WD Blue™ SN500 NVMe™ SSD выводит быстродействие на новый уровень: благодаря более современному стандарту NVMe, разработанному для высокопроизводительных и стандартных персональных компьютеров, оно в три раза выше, чем у наших самых продвинутых твердотельных накопителей с интерфейсом SATA. Твердотельный накопитель WD Blue SN500 NVMe SSD предоставляет реселлерам, производителям компьютеров и потребителям преимущества стандарта NVMe для хранения данных. Твердотельный накопитель WD Blue SN500 NVMe SSD, доступный в вариантах емкости 250 ГБ и 500 ГБ и имеющий форм-фактор M.2 2280, позволит добиться нужной скорости работы компьютера.
+                                h3 Скорость передачи данных до 1700 МБ/с
+                                p Обеспечивает скорость последовательного чтения до 1700 МБ/с и скорость последовательной записи до 1450 МБ/с (для модели емкостью 500 ГБ).
+                                h3 Фирменный контроллер и технология 3D NAND
+                                p Разработанные нами контроллер и технология 3D NAND поддерживают интерфейс PCIe® NVMe™ и конфигурации без DRAM.
+                        //- middle
+                        .article__middle
+                            .article__date 15.09.19
+                            .article__middle-title
+                                | Поделиться
+                                br
+                                | новостью
+                            .article__socials
+                                .asocials
+                                    .asocials__title
+                                        | Поделиться
+                                        br
+                                        | новостью
+                                    .asocials__list
+                                        each i,x in socials
+                                            a(href=i.href style='background-color: '+i.bg+';' target='_blank').asocial
+                                                +image('images/content/socials/'+(x+1)+'.png').asocial__img
+                        //- same
+                        .article__same
+                            .asame
+                                .asame__title Похожие новости
+                                .asame__list
+                                    .row
+                                        each i in [1,2,3,4]
+                                            .asame__item
+                                                +new([1])
+                        //- same
+                        .article__same.article__same_t
+                            .asame
+                                .asame__title Похожие новости
+                                .asame__list
+                                    .row
+                                        each i in [1,2]
+                                            .asame__item
+                                                +new([1])
+
+
+
+
+
+
+
+
+
+

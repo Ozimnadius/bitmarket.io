@@ -1,0 +1,23 @@
+extends ../main
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main.forbidden
+        .container
+            .forbidden__wrap
+                +image('images/404.png','404','forbidden__img')
+                .forbidden__title
+                    | Извините, данной страницы
+                    br
+                    | не существует.
+                a(href='/').forbidden__link.btn.btn_r Вернуться на главную
+
+
+
+
+
+
+
+

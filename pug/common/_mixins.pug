@@ -90,7 +90,6 @@ mixin items(arr, dopClass)
                         .item__buy-title купить товар
                         +icon('cart', 'item__buy-svg')
 
-
 mixin new(arr)
     each i in arr
         a(href='article.html').new
@@ -116,6 +115,40 @@ mixin revs()
                     .rev__prof Генеральный директор холдинга «Кабельный альянс»
                 .rev__link Читать отзыв
 
+mixin revs2(dopClass)
+    .revs
+        .revs__top
+            .revs__title.title Отзывы
+            a(href='reviews.html').revs__link.link Смотреть все
+        .revs__list
+            a(href='reviw.html' class=dopClass).rev
+                .rev__top
+                    .rev__img
+                        img(src='images/content/reviews/img.jpg' alt='lorem').rev__pic
+                .rev__bottom
+                    .rev__author Рудой Аркадий
+                    .rev__prof Генеральный директор холдинга «Кабельный альянс»
+                .rev__link Читать отзыв
+            a(href='reviw.html' class=dopClass).rev
+                .rev__top
+                    .rev__img
+                        img(src='images/content/reviews/img.jpg' alt='lorem').rev__pic
+                .rev__bottom
+                    .rev__author Рудой Аркадий
+                    .rev__prof Генеральный директор холдинга «Кабельный альянс»
+                .rev__link Читать отзыв
+
+mixin rev()
+    a(href='reviw.html').rev
+        .rev__top
+            .rev__img
+                img(src='images/content/reviews/img.jpg' alt='lorem').rev__pic
+        .rev__bottom
+            .rev__author Рудой Аркадий
+            .rev__prof Генеральный директор холдинга «Кабельный альянс»
+        .rev__link Читать отзыв
+
+
 mixin slider(title, name, dopClass)
     div(class=name).slider
         .slider__top
@@ -127,12 +160,12 @@ mixin slider(title, name, dopClass)
                         .swiper-slide.slider__slide
                             +items([1],dopClass)
 mixin sliderTitle(title)
-  .slider__title.title= title
-  .slider__nav
-    button(type='button').slider__prev.arrow
-      +icon('arr-l','arrow__svg')
-    button(type='button').slider__next.arrow
-      +icon('arr-r','arrow__svg')
+    .slider__title.title= title
+    .slider__nav
+        button(type='button').slider__prev.arrow
+            +icon('arr-l','arrow__svg')
+        button(type='button').slider__next.arrow
+            +icon('arr-r','arrow__svg')
 
 mixin filterMore()
     .filter__more
@@ -142,6 +175,12 @@ mixin filterMore()
         button(type='button').filter__more-btn
             span.filter__more-title Скрыть
             +icon('angle', 'filter__more-svg')
+
+mixin contactsNav(activeIndex)
+    .anav
+        a(href='about.html' class=activeIndex == 1 ? 'active' : '').anav__item.btn.btn_g О компании
+        a(href='career.html' class=activeIndex == 2 ? 'active' : '').anav__item.btn.btn_g Карьера в компании
+        a(href='contacts.html' class=activeIndex == 3 ? 'active' : '').anav__item.btn.btn_g Контакты
 
 
 

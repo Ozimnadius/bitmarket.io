@@ -1,0 +1,162 @@
+.about {
+  padding-bottom: 60px;
+  @include lg-block {
+    padding-bottom: 0;
+  }
+
+  &__right {
+    @include lg-block {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__banner {
+    height: 500px;
+    border-radius: 8px;
+    background-color: $bg;
+    overflow: hidden;
+    margin-bottom: 60px;
+    @include lg-block {
+      height: 234px;
+      margin-bottom: 40px;
+    }
+    @include sm-block {
+      height: 234px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    @include sm-block {
+      display: none;
+    }
+
+    &_m {
+      display: none;
+      @include sm-block {
+        display: block;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 23px;
+    @include lg-block {
+      margin-bottom: 15px;
+    }
+    @include sm-block{
+      margin-bottom: 7px;
+    }
+  }
+
+  &__content {
+    margin-bottom: 40px;
+    @include sm-block{
+      margin-bottom: 25px;
+    }
+
+    p {
+      @include sm-block {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__why {
+    margin-bottom: 60px;
+    @include lg-block {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.awhy {
+  &__title {
+    margin-bottom: 35px;
+    @include lg-block {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__item {
+    height: 158px;
+    border-radius: 8px;
+    background-color: $red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+    @include col;
+    @include size(15/6);
+    @include size-lg(15/3);
+    @include lg-block {
+      margin-bottom: 30px;
+    }
+    @include size-sm(15);
+    @include sm-block {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img {
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    color: $bg;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: lh(12, 21);
+    letter-spacing: 0.72px;
+  }
+}
+
+.arevs {
+  &__top {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 35px;
+    @include lg-block {
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__title {
+    margin-right: 35px;
+    line-height: 1;
+  }
+
+  &__link {
+    line-height: 1;
+  }
+}
+
+.arev {
+  @include col;
+  @include size(15/4);
+  @include size-lg(15/2);
+  @include lg-block {
+    display: none;
+  }
+  @include size-sm(15);
+
+  &:nth-child(1), &:nth-child(2) {
+    @include lg-block {
+      display: block;
+    }
+  }
+
+  &:nth-child(2) {
+    @include lg-block {
+      display: block;
+    }
+    @include sm-block {
+      display: none;
+    }
+  }
+
+}

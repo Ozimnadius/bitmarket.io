@@ -1,0 +1,125 @@
+extends ../main
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main.contacts
+        //- breadcrumbs
+        .container
+            .bread
+                a(href='/').bread__item Главная
+                +icon('angle-r','bread__seporator')
+                span.bread__item.bread__item_active Контакты
+        //- row
+        section.contacts__row
+            .container
+                .row
+                    //- left
+                    .left.contacts__left
+                        //- nav
+                        .contacts__nav
+                            +contactsNav(3)
+                        //- blog
+                        .contacts__blog.list__blog.list__blog_t
+                            +blog([1, 2])
+                    //- right
+                    .right.contacts__right
+                        .contacts__nav.contacts__nav_t
+                            +contactsNav(3)
+                        .contacts__title Контакты
+                        .row.contacts__row
+                            //- office
+                            .contacts__block
+                                .cblock
+                                    .cblock__top
+                                        .cblock__title Офис
+                                        a(href='/' target='_blank').cblock__link.link Посмотреть на карте
+                                    .cblock__bottom
+                                        .cblock__contacts
+                                            .contact
+                                                .contact__name Контактный телефон
+                                                .contact__vals
+                                                    a(href='tel:+7(495)260-12-35').contact__val +7 (495) 260-12-35
+                                                    a(href='tel:+7(495)260-12-35').contact__val +7 (495) 260-12-35
+                                            .contact
+                                                .contact__name Контактный e-mail
+                                                .contact__vals
+                                                    a(href='mailto:info@bitmarket.ru').contact__val info@bitmarket.ru
+                                                    a(href='mailto:info@bitmarket.ru').contact__val info@bitmarket.ru
+                                            .contact
+                                                .contact__name Адрес
+                                                .contact__vals
+                                                    a(href='/').contact__val г. Москва, ул. 2-я Новорублевская, д.13А
+
+
+
+
+                            //- store
+                            .contacts__block
+                                .cblock
+                                    .cblock__top
+                                        .cblock__title Склад
+                                        a(href='/' target='_blank').cblock__link.link Посмотреть на карте
+                                    .cblock__bottom
+                                        .cblock__contacts
+                                            .contact
+                                                .contact__name Контактный телефон
+                                                .contact__vals
+                                                    a(href='tel:+7(495)260-12-35').contact__val +7 (495) 260-12-35
+                                            .contact
+                                                .contact__name Контактный e-mail
+                                                .contact__vals
+                                                    a(href='mailto:info@bitmarket.ru').contact__val info@bitmarket.ru
+                                            .contact
+                                                .contact__name Адрес
+                                                .contact__vals
+                                                    a(href='/').contact__val г. Москва, ул. 2-я Новорублевская, д.13А
+                            //- details
+                            .contacts__block
+                                .cblock
+                                    .cblock__top
+                                        .cblock__title Реквизиты
+                                        a(href='/' download=true).cblock__link.link Скачать
+                                    .cblock__bottom
+                                        .cblock__details
+                                            .cdetails
+                                                each i in contactsDetails
+                                                    div(class=i.dopClass).cdetail
+                                                        .cdetail__name= i.name
+                                                        .cdetail__val= i.val
+
+
+                            //- form
+                            .contacts__block
+                                form.form
+                                    //- title
+                                    .form__title Заказ звонка
+                                    //- fields
+                                    .form__fields
+                                        .form__field
+                                            input(type='text' name='name' placeholder='Ваше имя *' required=true).form__input
+                                        .form__field
+                                            input(type='tel' name='tel' placeholder='Номер телефона *' required=true).form__input
+                                        .form__field
+                                            input(type='email' name='email' placeholder='Email *' required=true).form__input
+                                        .form__field
+                                            textarea(name='comment' placeholder='Сообщение').form__input.form__input_area
+
+                                    //- info
+                                    .form__info
+                                        |Нажимая на кнопку, вы соглашаетесь на обработку персональных данных в соответствии с Условиями &nbsp;
+                                        a(href='/') политики конфиденциальности.
+                                    //- button
+                                    button(type='submit').btn.btn_r.form__submit Отправить запрос
+                            //- map
+                            .contacts__block.contacts__block_map
+                                .contacts__map
+                                    #map2
+
+
+
+
+
+
+

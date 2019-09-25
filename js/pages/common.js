@@ -1,4 +1,6 @@
 // common.js
+$('input[type=tel]').mask('+7 (999) 999-99-99');
+
 function Switches(prop) {
     this.sws = document.querySelector(prop.sws);
     this.swsList = document.querySelectorAll(prop.sw);

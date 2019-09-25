@@ -1,0 +1,65 @@
+extends ../main
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main.contacts.about
+        //- breadcrumbs
+        .container
+            .bread
+                a(href='/').bread__item Главная
+                +icon('angle-r','bread__seporator')
+                span.bread__item.bread__item_active О компании
+        //- row
+        section.contacts__row
+            .container
+                .contacts__nav.contacts__nav_t
+                    +contactsNav(1)
+                .about__banner
+                    +image('images/content/about/img.jpg','lorem','about__img')
+                    +image('images/content/about/img-m.jpg','lorem','about__img about__img_m')
+
+                .row
+                    //- left
+                    .left.contacts__left.about__left
+                        //- nav
+                        .contacts__nav
+                            +contactsNav(1)
+                        //- blog
+                        .contacts__blog.list__blog.list__blog_t
+                            +blog([1, 2])
+                    //- right
+                    .right.contacts__right.about__right
+                        .contacts__title.about__title О компании
+                        .about__content
+                            .content
+                                p Как принято считать, некоторые особенности внутренней политики объединены в целые кластеры себе подобных. Принимая во внимание показатели успешности, глубокий уровень погружения требует от нас анализа переосмысления внешнеэкономических политик. Ясность нашей позиции очевидна: глубокий уровень погружения выявляет срочную потребность новых принципов формирования материально-технической и кадровой базы. Таким образом, понимание сути ресурсосберегающих технологий прекрасно подходит для реализации модели развития.
+                                p Таким образом, семантический разбор внешних противодействий играет важную роль в формировании инновационных методов управления процессами. Господа, синтетическое тестирование требует определения и уточнения новых принципов формирования материально-технической и кадровой базы.
+                                p Таким образом, семантический разбор внешних противодействий играет важную роль в формировании инновационных методов управления процессами. Господа, синтетическое тестирование требует определения и уточнения новых принципов формирования материально-технической и кадровой базы.
+
+                        .about__why
+                            .awhy
+                                .awhy__title.title Почему с нами работают?
+                                .awhy__row.row
+                                    each i,x in awhy
+                                        .awhy__item
+                                            +image('images/content/about/'+(x+1)+'.png', 'lorem', 'awhy__img')
+                                            .awhy__name!=i
+                        .about__revs
+                            .arevs
+                                .arevs__top
+                                    .arevs__title.title Отзывы о нас
+                                    a(href='/').arevs__link.link Смотреть все
+                                .arevs__bottom.row
+                                    each i in [1,2,3,4]
+                                        .arev
+                                            +rev()
+
+
+
+
+
+
+
+
