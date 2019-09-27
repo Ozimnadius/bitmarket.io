@@ -1,0 +1,117 @@
+.delivery {
+  padding-bottom: 30px;
+  @include lg-block{
+    padding-bottom: 50px;
+  }
+  @include sm-block{
+    padding-bottom: 40px;
+  }
+
+
+  &__right {
+    @include sm-block{
+      margin-bottom: 0px;
+    }
+  }
+
+  &__blog {
+    @include lg-block{
+      margin-bottom: 0;
+    }
+  }
+
+  &__news {
+    @include lg-block{
+      display: none;
+    }
+  }
+
+  &__title {
+    @include sm-block{
+      margin-bottom: 20px;
+    }
+  }
+
+  &__sub {
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: lh(15,30);
+    @include sm-block{
+      margin-bottom: 10px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 35px;
+    @include lg-block{
+      margin-bottom: 20px;
+    }
+    @include sm-block{
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item {
+    @include col;
+    @include size(15/4);
+    @include size-lg(15/1);
+    @include lg-block{
+      margin-bottom: 20px;
+    }
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    border: 1px solid $white6;
+    background-color: $bg;
+    height: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+
+    &-img {
+      margin-right: 30px;
+    }
+
+    &-title {
+      font-size: 15px;
+      font-weight: 800;
+      line-height: lh(15,24);
+    }
+  }
+
+  &__content {
+    p{
+      @include sm-block{
+        font-size: 15px;
+      }
+    }
+    h3{
+      font-size: 24px;
+      @include lg-block{
+        font-size: 18px;
+      }
+    }
+
+    ul {
+      padding: 0;
+      margin-bottom: 30px;
+      list-style: none;
+      li{
+        padding-left: 20px;
+        position: relative;
+        &:before {
+          content: '';
+          display: inline-block;
+          border-radius: 50%;
+          width: 6px;
+          height: 6px;
+          background-color: $red;
+          position: absolute;
+          left: 0;
+          top: 12px;
+        }
+
+      }
+    }
+  }
+}

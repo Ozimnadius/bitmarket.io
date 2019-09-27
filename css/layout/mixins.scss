@@ -56,9 +56,6 @@ $vh: 1080;
     }
   }
 
-
-
-
   h1 {
     margin: 0.67em 0;
   }
@@ -93,6 +90,9 @@ $vh: 1080;
     margin-bottom: 30px;
     font-weight: 400;
     line-height: lh(15,30);
+  }
+  a {
+    color: $blue;
   }
 }
 

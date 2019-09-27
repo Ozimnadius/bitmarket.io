@@ -7,7 +7,11 @@ mixin iconPath(iconPath,iconName, iconClass)
         use(xlink:href=`${iconPath}/sprite.svg#${iconName}`)
 
 mixin image(imagePath, imageAlt, imageClass)
-    img(src=`${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+    if imageAlt
+        - var alt = 'lorem'
+    else
+        - var alt = imageAlt
+    img(src=`${imagePath}`, alt=`${alt}`, class=`${imageClass}`)
 
 mixin blog(arr)
     .blog
@@ -181,6 +185,13 @@ mixin contactsNav(activeIndex)
         a(href='about.html' class=activeIndex == 1 ? 'active' : '').anav__item.btn.btn_g О компании
         a(href='career.html' class=activeIndex == 2 ? 'active' : '').anav__item.btn.btn_g Карьера в компании
         a(href='contacts.html' class=activeIndex == 3 ? 'active' : '').anav__item.btn.btn_g Контакты
+
+mixin deliveryNav(activeIndex)
+    .anav
+        a(href='how.html' class=activeIndex == 1 ? 'active' : '').anav__item.btn.btn_g Как оформить заказ
+        a(href='payment.html' class=activeIndex == 2 ? 'active' : '').anav__item.btn.btn_g Условия оплаты
+        a(href='delivery.html' class=activeIndex == 3 ? 'active' : '').anav__item.btn.btn_g Условия доставки
+
 
 
 

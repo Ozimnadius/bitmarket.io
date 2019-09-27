@@ -1,0 +1,165 @@
+.popup{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba($black,.7);
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__form {
+    width: 270px;
+    margin: 0 auto;
+
+    &.form {
+      @include md-block{
+        max-height: 100vh;
+      }
+      padding: 20px;
+    }
+  }
+}
+
+.form {
+  border-radius: 8px;
+  border: 1px solid $white;
+  background-color: $white2;
+  padding: 40px 30px;
+  position: relative;
+  overflow-y: auto;
+  @include lg-block{
+    padding: 40px 20px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    &-svg {
+      width: 14px;
+      height: 14px;
+      fill: $text;
+      stroke: $white7;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 25px;
+  }
+
+  &__product {
+    margin-bottom: 20px;
+  }
+
+  &__fields {
+    margin-bottom: 15px;
+  }
+
+  &__field {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid $white;
+    background-color: $bg;
+    color: $text;
+    font-size: 12px;
+    padding: 17px 20px;
+
+    &::placeholder{
+      color: rgba($text,.7);
+    }
+
+    &_area {
+      height: 72px;
+    }
+
+  }
+
+  &__info {
+    font-size: 10px;
+    line-height: lh(10,18);
+    margin-bottom: 30px;
+    letter-spacing: 0.6px;
+    @include sm-block{
+      margin-bottom: 15px;
+    }
+    a{
+      color: $blue;
+    }
+
+  }
+
+  &__submit {
+    width: 230px;
+    margin: 0 auto;
+  }
+}
+
+.fproduct {
+  border-radius: 8px;
+  border: 1px solid $white;
+  background-color: $bg;
+  padding: 20px;
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  &__img {
+    width: 65px;
+  }
+
+  &__cat {
+    color: $black;
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__link {
+    color: $blue;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: lh(10,18);
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  &__price {
+
+    &-val{
+      font-size: 18px;
+      font-weight: 700;
+    }
+    &-cur{
+      font-size: 10px;
+      font-weight: 600;
+    }
+  }
+}

@@ -76,9 +76,9 @@ html(lang="ru")
                             .header__order
                                 //- controls
                                 .header__controls
-                                    a(href='cabinet.html').header__control
+                                    a(href='compare.html').header__control
                                         +icon('recycle', 'header__control-svg')
-                                    a(href='cabinet.html').header__control
+                                    a(href='favorites.html').header__control
                                         +icon('heart', 'header__control-svg')
 
                                 //- basket
@@ -239,6 +239,40 @@ html(lang="ru")
                         .footer__copy © Все права защищены 2019
 
 
+
+        //- popup
+        .popup
+            .popup__wrapper
+                form.form.popup__form.jsFormFast
+                    button(type='button').form__close
+                        +icon('close', 'form__close-svg')
+                    .form__wrap
+                        .form__title Заказать товар
+                        .form__product
+                            .fproduct
+                                .fproduct__image
+                                    +image('images/content/products/img.jpg','','fproduct__img')
+                                .fproduct__cat Видеокарты
+                                a(href='product.html').fproduct__link Видеокарта AMD (ATI) Radeon RX 570 Sapphire Pulse PCI-E 8192Mb
+                                .fproduct__price
+                                    span.fproduct__price-val 12.290&nbsp;
+                                    span.fproduct__price-cur руб.
+                        .form__fields
+                            .form__field
+                                input(type='text' name='name' placeholder='Ваше имя *' required=true).form__input
+                            .form__field
+                                input(type='tel' name='tel' placeholder='Номер телефона *' required=true).form__input
+                            .form__field
+                                input(type='email' name='email' placeholder='Email *' required=true).form__input
+                            .form__field
+                                textarea(name='comment' placeholder='Сообщение').form__input.form__input_area
+
+                        //- info
+                        .form__info
+                            |Нажимая на кнопку, вы соглашаетесь на обработку персональных данных в соответствии с Условиями &nbsp;
+                            a(href='/') политики конфиденциальности.
+                        //- button
+                        button(type='submit').btn.btn_r.form__submit.jsFastbuy Отправить запрос
         script(src='js/vendor.min.js')
         script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
         script(src='js/main.min.js')
