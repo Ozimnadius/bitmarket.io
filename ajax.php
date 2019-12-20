@@ -70,15 +70,18 @@ function fastbuy()
                                                                                 src="images/icons/next.png" alt="lorem">
                         </div>
                     </div>
-                    <div class="fbuy__adds"><a class="fbuy__add" href="cabinet.html">
+                    <div class="fbuy__adds">
+                        <a class="fbuy__add jsCompare" href="#">
                             <svg class="fbuy__add-svg">
                                 <use xlink:href="/images/icons/sprite.svg#recycle"></use>
                             </svg>
-                        </a><a class="fbuy__add" href="cabinet.html">
+                        </a>
+                        <a class="fbuy__add jsFavorite" href="#">
                             <svg class="fbuy__add-svg">
                                 <use xlink:href="/images/icons/sprite.svg#heart"></use>
                             </svg>
-                        </a></div>
+                        </a>
+                    </div>
                 </div>
                 <div class="fbuy__left-bottom">
                     <div class="fbuy__price">
