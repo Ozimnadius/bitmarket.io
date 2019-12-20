@@ -1,6 +1,6 @@
 //product.js
 $(function () {
-    let sliderProduct = new Swiper ('.product__container', {
+    let sliderProduct = new Swiper('.product__container', {
         slidesPerView: 1,
         loop: true,
         navigation: {
@@ -8,6 +8,15 @@ $(function () {
             prevEl: '.product__slider-prev',
         },
     });
+    // let sliderFastbuy = new Swiper('.fbuy__container', {
+    //     slidesPerView: 1,
+    //     loop: true,
+    //     navigation: {
+    //         nextEl: '.fbuy__slider-next',
+    //         prevEl: '.fbuy__slider-prev',
+    //     },
+    // });
+
 
     if (document.querySelector('.product__sws')) {
         let subSwitches = new Switches({
