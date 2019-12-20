@@ -295,6 +295,9 @@
     margin-left: -87px;
 
     @include tr3s;
+    @include sm-block{
+      display: none;
+    }
   }
 
   &__pic {
